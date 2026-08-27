@@ -1,0 +1,148 @@
+# Perfil por tipo de entidad. Define qué campos aportan a cada señal del ranking.
+# Los nombres de campo provienen de Data V1.0 y no deben inventarse.
+version: "1.0.0"
+
+defaults:
+  domain_fields: [keywords, application_domains, main_topics, disciplinary_area]
+  method_fields: [methodology]
+  evidence_fields: [description]
+  year_fields: []
+  status_field: status
+  active_field: active
+  people_relations: []
+  output_relations: []
+
+profiles:
+  InstitutionalNeed:
+    domain_fields: [title, description, context, expected_impact, originating_unit]
+    method_fields: []
+    evidence_fields: [title, description, context, expected_impact, priority]
+    year_fields: [year]
+    people_relations: []
+    output_relations: []
+    inferred_relation: SEMANTICALLY_RELATED
+
+  Project:
+    domain_fields: [keywords, disciplinary_area, application_context, title, abstract]
+    method_fields: [methodology, general_objective, expected_results]
+    evidence_fields:
+      [title, problem_statement, abstract, general_objective, methodology,
+       expected_results, application_context, keywords, disciplinary_area]
+    year_fields: [end_year, start_year]
+    people_relations: [PARTICIPATED_IN_PROJECT, EXECUTED_BY_GROUP]
+    output_relations: [DERIVED_FROM_PROJECT]
+    inferred_relation: RELEVANT_ANTECEDENT
+
+  Thesis:
+    domain_fields: [keywords, research_area, application_context, title, abstract]
+    method_fields: [methodology, data_or_population, general_objective]
+    evidence_fields:
+      [title, abstract, problem_statement, general_objective, methodology,
+       main_results, conclusions, keywords, research_area, application_context,
+       data_or_population]
+    year_fields: [graduation_year]
+    people_relations: [ADVISED_THESIS]
+    output_relations: []
+    inferred_relation: RELEVANT_ANTECEDENT
+
+  Publication:
+    domain_fields: [keywords, title, abstract, journal_or_event]
+    method_fields: [abstract]
+    evidence_fields: [title, abstract, keywords, publication_type, journal_or_event]
+    year_fields: [year]
+    people_relations: [AUTHORED_PUBLICATION]
+    output_relations: [DERIVED_FROM_PROJECT]
+    inferred_relation: RELEVANT_ANTECEDENT
+
+  Researcher:
+    domain_fields: [research_interests, application_domains, academic_background, profile_summary]
+    method_fields: [methodological_expertise]
+    evidence_fields:
+      [full_name, academic_background, profile_summary, research_interests,
+       methodological_expertise, application_domains]
+    year_fields: []
+    people_relations: [MEMBER_OF_GROUP, HAS_EXPERTISE]
+    output_relations: [PARTICIPATED_IN_PROJECT, AUTHORED_PUBLICATION, ADVISED_THESIS]
+    inferred_relation: POTENTIAL_COLLABORATOR
+
+  ResearchGroup:
+    domain_fields: [main_area, description, mission, group_name]
+    method_fields: [mission]
+    evidence_fields: [group_name, description, mission, main_area]
+    year_fields: [creation_year]
+    people_relations: [MEMBER_OF_GROUP]
+    output_relations: [EXECUTED_BY_GROUP, BELONGS_TO_GROUP]
+    inferred_relation: POTENTIAL_COLLABORATOR
+
+  ResearchLine:
+    domain_fields: [line_name, description, keywords]
+    method_fields: []
+    evidence_fields: [line_name, description, keywords]
+    year_fields: []
+    output_relations: [BELONGS_TO_GROUP]
+    inferred_relation: SEMANTICALLY_RELATED
+
+  Capability:
+    domain_fields: [application_domains, description, capability_name]
+    method_fields: [capability_type, available_resources]
+    evidence_fields:
+      [capability_name, capability_type, description, available_resources,
+       application_domains, maturity_level]
+    year_fields: []
+    maturity_field: maturity_level
+    maturity_max: 5
+    inferred_relation: CAN_SUPPORT
+
+  Subject:
+    domain_fields: [main_topics, disciplinary_area, description, purpose, subject_name]
+    method_fields: [purpose]
+    evidence_fields: [subject_name, description, purpose, main_topics, disciplinary_area]
+    year_fields: []
+    output_relations: [DEVELOPS_COMPETENCY, HAS_LEARNING_OUTCOME]
+    inferred_relation: CURRICULAR_ALIGNMENT
+
+  Competency:
+    domain_fields: [description]
+    method_fields: [competency_type]
+    evidence_fields: [competency_type, description]
+    inferred_relation: CURRICULAR_ALIGNMENT
+
+  LearningOutcome:
+    domain_fields: [outcome_description]
+    method_fields: [cognitive_level, evidence_type]
+    evidence_fields: [outcome_description, cognitive_level, evidence_type]
+    inferred_relation: CURRICULAR_ALIGNMENT
+
+  Expertise:
+    domain_fields: [expertise_name, expertise_type]
+    method_fields: [expertise_type, proficiency_level]
+    evidence_fields: [expertise_name, expertise_type, proficiency_level, evidence_source]
+    inferred_relation: CAN_SUPPORT
+
+  Program:
+    domain_fields: [program_name, description, disciplinary_area, strategic_topics, graduate_profile]
+    method_fields: []
+    evidence_fields:
+      [program_name, description, disciplinary_area, graduate_profile, strategic_topics]
+    inferred_relation: CURRICULAR_ALIGNMENT
+
+  Faculty:
+    domain_fields: [faculty_name, description, strategic_focus]
+    method_fields: []
+    evidence_fields: [faculty_name, description, strategic_focus]
+    inferred_relation: SEMANTICALLY_RELATED
+
+  Document:
+    domain_fields: []
+    method_fields: []
+    evidence_fields: []
+    inferred_relation: SEMANTICALLY_RELATED
+
+# Campos que anclan una entidad a la estructura institucional.
+institutional_anchor_fields:
+  - faculty_id
+  - program_id
+  - primary_program_id
+  - group_id
+  - responsible_unit
+  - originating_unit

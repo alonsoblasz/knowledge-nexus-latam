@@ -1,0 +1,125 @@
+# Configuración versionada del ranking explicable de Knowledge Nexus.
+# El total expresa RELEVANCIA para la consulta, nunca verdad ni probabilidad de éxito.
+version: "1.0.0"
+
+# Pesos de la fórmula base acordada con el equipo.
+weights:
+  semantic: 0.35
+  domain: 0.20
+  method: 0.15
+  graph: 0.10
+  evidence: 0.10
+  actionable: 0.10
+
+semantic:
+  # La señal semántica fusiona el canal vectorial y el canal léxico (BM25).
+  vector_weight: 0.70
+  lexical_weight: 0.30
+  # Calibración del coseno: por debajo del piso se considera ruido, por encima
+  # del techo se considera coincidencia plena. Depende del modelo y se registra
+  # en el manifiesto de embeddings.
+  cosine_floor: 0.25
+  cosine_ceiling: 0.85
+  # Peso del texto de la consulta frente al texto de la entidad de origen
+  # cuando la solicitud incluye `source_entity_id`.
+  query_text_weight: 0.65
+
+domain:
+  institutional_weight: 0.35   # facultad, programa, grupo o unidad compartida
+  topical_weight: 0.40         # solapamiento de vocabulario temático declarado
+  area_weight: 0.25            # coincidencia de área disciplinar declarada
+
+method:
+  # Cuando la consulta no declara metodología se evalúa la sustancia
+  # metodológica del candidato en lugar de comparar contra nada.
+  declared_weight: 0.50
+  density_weight: 0.50
+  # En ese modo de respaldo la señal no puede saturar: no hubo comparación.
+  fallback_cap: 0.75
+
+graph:
+  proximity_weight: 0.45
+  connectivity_weight: 0.35
+  context_bridge_weight: 0.20
+  # Decaimiento por número de saltos explícitos (1, 2 y 3 saltos).
+  hop_decay: [1.0, 0.6, 0.3]
+  max_distance: 3
+  degree_cap: 12
+
+evidence:
+  field_coverage_weight: 0.50
+  provenance_weight: 0.20
+  relation_provenance_weight: 0.20
+  document_weight: 0.10
+  relation_provenance_cap: 3
+
+actionable:
+  # Año de referencia reproducible: se calcula como el año máximo presente en
+  # Data V1.0 para que el score no dependa del reloj de la máquina.
+  recency_half_life_years: 6.0
+  status_scores:
+    COMPLETED: 1.00
+    ONGOING: 0.90
+    IN_PROGRESS: 0.90
+    ACTIVE: 1.00
+    AVAILABLE: 1.00
+    OPEN: 0.85
+    APPROVED: 0.90
+    PLANNED: 0.60
+    FORMULATION: 0.55
+    SUSPENDED: 0.30
+    INACTIVE: 0.20
+    CLOSED: 0.30
+    DEPRECATED: 0.15
+  default_status_score: 0.70
+
+penalties:
+  inactive_entity: 0.15
+  missing_evidence: 0.10
+  superficial_match: 0.08
+  domain_mismatch: 0.10
+  redundancy: 0.06
+  max_total: 0.35
+
+thresholds:
+  missing_evidence_below: 0.30
+  superficial_semantic_below: 0.35
+  redundancy_similarity_above: 0.92
+  domain_mismatch_semantic_below: 0.55
+
+retrieval:
+  vector_top_k_per_type: 30
+  lexical_top_k_per_type: 30
+  expansion_seeds: 12
+  expansion_max_hops: 2
+  candidate_cap: 400
+  # Umbral mínimo de relevancia para mostrar una conexión. Con 0.0 se muestra
+  # el mejor resultado disponible; subirlo permite responder "sin resultados".
+  min_total_score: 0.0
+  # Tipos priorizados para responder a una necesidad institucional.
+  default_target_types:
+    - Project
+    - Thesis
+    - Publication
+    - Researcher
+    - Capability
+    - ResearchGroup
+    - Subject
+  # Expansión de consulta con el léxico bilingüe (config/lexicon.yaml).
+  # Se puede desactivar sin romper el pipeline.
+  use_lexicon_expansion: true
+
+# Selección final mostrada a la interfaz.
+selection:
+  # Evita que un solo tipo ocupe todo el ranking cuando se piden varios tipos.
+  diversify_by_type: true
+  max_per_type: 2
+  # Explicaciones deterministas solo para los mejores candidatos (coste acotado).
+  explain_top_k: 25
+  # La detección de redundancia solo compara los primeros resultados.
+  redundancy_window: 50
+  # Por debajo de estos valores la respuesta se marca como poco fiable:
+  # el sistema entrega lo mejor que encontró, pero avisa de que la consulta
+  # probablemente no tiene respuesta en Data V1.0.
+  low_confidence_semantic_below: 0.45
+  low_confidence_total_below: 0.55

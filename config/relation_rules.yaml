@@ -1,0 +1,76 @@
+# Reglas deterministas para etiquetar relaciones inferidas y clasificar
+# oportunidades. Toda relación producida por estas reglas es INFERRED.
+version: "1.0.0"
+
+# Etiqueta por tipo de entidad candidata (se afina con las señales dominantes).
+relation_by_type:
+  Project: RELEVANT_ANTECEDENT
+  Thesis: RELEVANT_ANTECEDENT
+  Publication: RELEVANT_ANTECEDENT
+  Researcher: POTENTIAL_COLLABORATOR
+  ResearchGroup: POTENTIAL_COLLABORATOR
+  ResearchLine: SEMANTICALLY_RELATED
+  Capability: CAN_SUPPORT
+  Expertise: CAN_SUPPORT
+  Subject: CURRICULAR_ALIGNMENT
+  Competency: CURRICULAR_ALIGNMENT
+  LearningOutcome: CURRICULAR_ALIGNMENT
+  Program: CURRICULAR_ALIGNMENT
+  Faculty: SEMANTICALLY_RELATED
+  InstitutionalNeed: SEMANTICALLY_RELATED
+  Document: SEMANTICALLY_RELATED
+
+overrides:
+  # Un antecedente solo se declara como tal si el trabajo está terminado.
+  antecedent_requires_completed_status: true
+  completed_statuses: [COMPLETED, APPROVED, PUBLISHED, CLOSED, DEFENDED]
+  # Tipos cuyo solo hecho de existir implica un resultado publicado.
+  types_always_completed: [Publication]
+  antecedent_fallback: SEMANTICALLY_RELATED
+  # Si la compatibilidad metodológica domina claramente sobre el dominio.
+  method_dominance_margin: 0.25
+  method_relation: METHODOLOGICALLY_COMPATIBLE
+  method_min_score: 0.60
+  # Candidato alcanzado únicamente por expansión del grafo.
+  graph_only_relation: COMPLEMENTS
+
+# Reglas de oportunidad, evaluadas en orden. La primera que se cumple define el
+# tipo principal; las siguientes pueden generar oportunidades adicionales.
+opportunity_rules:
+  - type: RESEARCH_CONTINUITY
+    requires:
+      completed_antecedents_min: 1
+      min_top_score: 0.45
+    title_template: "Continuidad de investigación sobre {focus}"
+  - type: CAPABILITY_ACTIVATION
+    requires:
+      capabilities_min: 1
+      capability_min_maturity: 3
+    title_template: "Activación de capacidad institucional para {focus}"
+  - type: THESIS_TOPIC
+    requires:
+      theses_min: 2
+    title_template: "Línea de trabajos de grado sobre {focus}"
+  - type: COLLABORATION
+    requires:
+      researchers_min: 2
+      distinct_groups_min: 2
+    title_template: "Colaboración interdisciplinaria sobre {focus}"
+  - type: CURRICULAR_INTEGRATION
+    requires:
+      curricular_min: 2
+    title_template: "Integración curricular de {focus}"
+  - type: KNOWLEDGE_TRANSFER
+    requires:
+      publications_min: 1
+      capabilities_min: 1
+    title_template: "Transferencia de conocimiento sobre {focus}"
+  - type: NEW_RESEARCH
+    # Solo se propone si ninguna otra regla encontró respaldo.
+    fallback: true
+    requires: {}
+    title_template: "Nueva investigación exploratoria sobre {focus}"
+
+priority_thresholds:
+  HIGH: 0.60
+  MEDIUM: 0.40

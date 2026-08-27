@@ -1,0 +1,64 @@
+# Léxico auxiliar SOLO para el canal léxico (BM25) y para las señales de dominio
+# y método. No crea entidades, IDs ni relaciones: únicamente amplía los términos
+# de la consulta antes de contar coincidencias.
+#
+# Se puede desactivar con `retrieval.use_lexicon_expansion: false` en
+# config/ranking.yaml. La prueba de aceptación de PRJ-002 se ejecuta también con
+# la expansión desactivada (ver tests/test_retrieval.py).
+version: "1.0.0"
+
+# Grupos de términos equivalentes observados en Data V1.0 (español e inglés).
+synonyms:
+  - [deserción, deserción estudiantil, student attrition, attrition, abandono estudiantil,
+     permanencia estudiantil, retención estudiantil]
+  - [riesgo académico, rendimiento académico, trayectorias educativas]
+  - [analítica educativa, analítica del aprendizaje, learning analytics]
+  - [aprendizaje automático, machine learning, clasificación supervisada, modelos predictivos]
+  - [inteligencia artificial, ia explicable, sistemas inteligentes]
+  - [ciencia de datos, analítica de datos, data science]
+  - [salud ocupacional, seguridad y salud en el trabajo, riesgo laboral]
+  - [sostenibilidad, gestión ambiental, medio ambiente]
+  - [ciberseguridad, seguridad informática]
+  - [recuperación de información, information retrieval, nlp,
+     procesamiento de lenguaje natural]
+
+# Vocabulario metodológico observado en los campos `methodology`,
+# `methodological_expertise` y `data_or_population` de Data V1.0.
+method_terms:
+  - análisis aplicado
+  - análisis causal
+  - análisis comparativo
+  - análisis descriptivo
+  - análisis estadístico
+  - aprendizaje automático
+  - clasificación
+  - clasificación supervisada
+  - detección de anomalías
+  - diseño experimental
+  - diseño de prototipo
+  - estudio de caso
+  - estudio descriptivo
+  - evaluación comparativa
+  - integración de evidencia
+  - integración de fuentes
+  - modelamiento estadístico
+  - modelos longitudinales
+  - modelos probabilísticos
+  - optimización
+  - preparación de datos
+  - procesamiento de señales
+  - prototipo funcional
+  - revisión aplicada
+  - revisión sistemática
+  - series temporales
+  - simulación
+  - validación de resultados
+
+# Palabras vacías adicionales al tokenizar consultas en español.
+stopwords:
+  [a, al, algo, ante, como, con, cual, cuales, cuando, de, del, desde, donde, dos,
+   el, ella, ellas, ellos, en, entre, era, es, esa, ese, eso, esta, estas, este,
+   esto, estos, fue, ha, hacia, hasta, hay, la, las, le, les, lo, los, mas, más,
+   me, mi, mis, mucho, muy, no, nos, o, otra, otro, para, pero, poco, por, porque,
+   puede, pueden, que, qué, quien, se, ser, si, sin, sobre, son, su, sus, también,
+   tiene, todo, tras, un, una, uno, unos, y, ya]
