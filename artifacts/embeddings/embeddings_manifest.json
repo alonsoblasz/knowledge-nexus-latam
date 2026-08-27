@@ -1,0 +1,40 @@
+{
+  "artifact": "semantic_embeddings",
+  "artifact_version": "1.0",
+  "generated_at": "2026-08-27T18:34:30+00:00",
+  "model": "BAAI/bge-m3",
+  "dimension": 1024,
+  "normalized": true,
+  "provider": "sentence-transformers",
+  "device": "mps",
+  "prefixes": {},
+  "cosine_calibration": {
+    "cosine_floor": 0.35,
+    "cosine_ceiling": 0.62
+  },
+  "documents_processed": 3292,
+  "documents_in_corpus": 3292,
+  "documents_by_type": {
+    "Capability": 96,
+    "Competency": 252,
+    "Document": 60,
+    "Expertise": 720,
+    "Faculty": 6,
+    "InstitutionalNeed": 42,
+    "LearningOutcome": 378,
+    "Program": 18,
+    "Project": 320,
+    "Publication": 360,
+    "ResearchGroup": 24,
+    "ResearchLine": 60,
+    "Researcher": 180,
+    "Subject": 126,
+    "Thesis": 650
+  },
+  "batch_size": 16,
+  "output_file": "semantic_embeddings.jsonl",
+  "source_file": "semantic_documents.jsonl",
+  "source_sha256": "57b72929a2af719c42f84a33ab30ad661a254b0eeb42797b1e5a49ca9423fefb",
+  "warnings": [],
+  "notes": "Artefacto derivado y reproducible. No contiene credenciales ni texto fuente: solo ID, modelo, dimensión, hash del texto y vector."
+}

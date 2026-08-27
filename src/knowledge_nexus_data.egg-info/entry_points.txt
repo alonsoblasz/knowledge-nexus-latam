@@ -1,0 +1,3 @@
+[console_scripts]
+knowledge-nexus = knowledge_nexus_retrieval.cli:main
+knowledge-nexus-data = knowledge_nexus_data.cli:main

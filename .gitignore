@@ -1,0 +1,14 @@
+# Entorno
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+
+# Secretos: nunca deben versionarse
+.env
+
+# Artefacto de embeddings (34 MB). Se regenera con `make embeddings`
+# de forma reproducible; el manifiesto sí se versiona.
+artifacts/embeddings/*.jsonl
+artifacts/embeddings/*.tmp

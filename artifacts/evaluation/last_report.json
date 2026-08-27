@@ -1,0 +1,294 @@
+{
+  "k": 5,
+  "review_set_version": "1.0.0",
+  "disclaimer": "Conjunto de revisión construido por el equipo; NO es un Gold Standard oficial ni una validación académica. Las etiquetas de grado 1 provienen de una regla sobre campos declarados y las de grado 2 de revisión manual.",
+  "methodology": "Para cada necesidad se fija un término declarado del dominio y se marcan como pertinentes las entidades cuyos campos declarados lo contienen. El conjunto se congela antes de ajustar pesos. Limitaciones: cobertura parcial, sesgo hacia coincidencias literales y un solo revisor.",
+  "metric_notes": {
+    "precision_at_k": "Cota inferior: lo no etiquetado se considera desconocido, no irrelevante.",
+    "precision_at_k_labeled_types": "Precisión restringida a los tipos que la regla de etiquetado cubre.",
+    "expected_hit_rate_at_k": "Proporción de entidades etiquetadas recuperadas en el top-k; su techo es min(k, etiquetas)/etiquetas, reportado aparte.",
+    "evidence_coverage": "Conexiones con al menos un elemento de evidencia.",
+    "full_traceability": "Elementos de evidencia con archivo, fila, campo y fragmento."
+  },
+  "engine": {
+    "embedding_model": "BAAI/bge-m3",
+    "ranking_version": "1.0.0",
+    "graph_backend": "jsonl"
+  },
+  "summary": {
+    "cases": 10,
+    "precision_at_k": 0.58,
+    "precision_at_k_labeled_types": 0.8333,
+    "expected_hit_rate_at_k": 0.2202,
+    "expected_hit_rate_ceiling": 0.3639,
+    "ndcg_at_k": 0.6623,
+    "evidence_coverage": 1.0,
+    "full_traceability": 1.0,
+    "opportunities_only_existing_ids": true,
+    "negative_violations": 0,
+    "failed_expectations": 0,
+    "latency_ms_median": 165.5,
+    "latency_ms_p95": 256.04
+  },
+  "cases": [
+    {
+      "case_id": "CASE-NEED-001",
+      "source_entity_id": "NEED-001",
+      "retrieved": [
+        "PRJ-002",
+        "PRJ-004",
+        "THS-016",
+        "INV-124",
+        "INV-110"
+      ],
+      "labeled_hits": [
+        "PRJ-002",
+        "THS-016"
+      ],
+      "precision_at_k": 0.4,
+      "precision_at_k_labeled_types": 0.6667,
+      "expected_hit_rate_at_k": 0.1538,
+      "expected_hit_rate_ceiling": 0.3846,
+      "ndcg_at_k": 0.7073,
+      "negative_violations": [],
+      "evidence_coverage": 1.0,
+      "full_traceability": 1.0,
+      "opportunities_valid": true,
+      "latency_ms": 256.04
+    },
+    {
+      "case_id": "CASE-NEED-005",
+      "source_entity_id": "NEED-005",
+      "retrieved": [
+        "PRJ-033",
+        "PRJ-038",
+        "INV-066",
+        "INV-054",
+        "THS-091"
+      ],
+      "labeled_hits": [
+        "PRJ-033",
+        "PRJ-038",
+        "THS-091"
+      ],
+      "precision_at_k": 0.6,
+      "precision_at_k_labeled_types": 1.0,
+      "expected_hit_rate_at_k": 0.2308,
+      "expected_hit_rate_ceiling": 0.3846,
+      "ndcg_at_k": 0.6844,
+      "negative_violations": [],
+      "evidence_coverage": 1.0,
+      "full_traceability": 1.0,
+      "opportunities_valid": true,
+      "latency_ms": 174.04
+    },
+    {
+      "case_id": "CASE-NEED-006",
+      "source_entity_id": "NEED-006",
+      "retrieved": [
+        "PRJ-046",
+        "PRJ-042",
+        "INV-053",
+        "INV-045",
+        "THS-107"
+      ],
+      "labeled_hits": [
+        "PRJ-046"
+      ],
+      "precision_at_k": 0.2,
+      "precision_at_k_labeled_types": 0.3333,
+      "expected_hit_rate_at_k": 0.0667,
+      "expected_hit_rate_ceiling": 0.3333,
+      "ndcg_at_k": 0.3392,
+      "negative_violations": [],
+      "evidence_coverage": 1.0,
+      "full_traceability": 1.0,
+      "opportunities_valid": true,
+      "latency_ms": 160.57
+    },
+    {
+      "case_id": "CASE-NEED-008",
+      "source_entity_id": "NEED-008",
+      "retrieved": [
+        "PRJ-057",
+        "PRJ-060",
+        "INV-068",
+        "INV-070",
+        "THS-141"
+      ],
+      "labeled_hits": [
+        "PRJ-057"
+      ],
+      "precision_at_k": 0.2,
+      "precision_at_k_labeled_types": 0.3333,
+      "expected_hit_rate_at_k": 0.0714,
+      "expected_hit_rate_ceiling": 0.3571,
+      "ndcg_at_k": 0.3392,
+      "negative_violations": [],
+      "evidence_coverage": 1.0,
+      "full_traceability": 1.0,
+      "opportunities_valid": true,
+      "latency_ms": 168.0
+    },
+    {
+      "case_id": "CASE-NEED-009",
+      "source_entity_id": "NEED-009",
+      "retrieved": [
+        "INV-133",
+        "INV-149",
+        "PRJ-065",
+        "PRJ-070",
+        "THS-161"
+      ],
+      "labeled_hits": [
+        "PRJ-065",
+        "PRJ-070",
+        "THS-161"
+      ],
+      "precision_at_k": 0.6,
+      "precision_at_k_labeled_types": 1.0,
+      "expected_hit_rate_at_k": 0.2308,
+      "expected_hit_rate_ceiling": 0.3846,
+      "ndcg_at_k": 0.4469,
+      "negative_violations": [],
+      "evidence_coverage": 1.0,
+      "full_traceability": 1.0,
+      "opportunities_valid": true,
+      "latency_ms": 157.43
+    },
+    {
+      "case_id": "CASE-NEED-012",
+      "source_entity_id": "NEED-012",
+      "retrieved": [
+        "PRJ-093",
+        "PRJ-090",
+        "THS-236",
+        "THS-221",
+        "PUB-112"
+      ],
+      "labeled_hits": [
+        "PRJ-093",
+        "PRJ-090",
+        "THS-236",
+        "THS-221",
+        "PUB-112"
+      ],
+      "precision_at_k": 1.0,
+      "precision_at_k_labeled_types": 1.0,
+      "expected_hit_rate_at_k": 0.4167,
+      "expected_hit_rate_ceiling": 0.4167,
+      "ndcg_at_k": 1.0,
+      "negative_violations": [],
+      "evidence_coverage": 1.0,
+      "full_traceability": 1.0,
+      "opportunities_valid": true,
+      "latency_ms": 167.42
+    },
+    {
+      "case_id": "CASE-NEED-013",
+      "source_entity_id": "NEED-013",
+      "retrieved": [
+        "PRJ-097",
+        "PRJ-102",
+        "THS-246",
+        "INV-087",
+        "THS-256"
+      ],
+      "labeled_hits": [
+        "PRJ-097",
+        "PRJ-102",
+        "THS-246",
+        "THS-256"
+      ],
+      "precision_at_k": 0.8,
+      "precision_at_k_labeled_types": 1.0,
+      "expected_hit_rate_at_k": 0.3077,
+      "expected_hit_rate_ceiling": 0.3846,
+      "ndcg_at_k": 0.8539,
+      "negative_violations": [],
+      "evidence_coverage": 1.0,
+      "full_traceability": 1.0,
+      "opportunities_valid": true,
+      "latency_ms": 161.08
+    },
+    {
+      "case_id": "CASE-NEED-014",
+      "source_entity_id": "NEED-014",
+      "retrieved": [
+        "PRJ-105",
+        "PRJ-108",
+        "INV-081",
+        "THS-266",
+        "INV-092"
+      ],
+      "labeled_hits": [
+        "PRJ-105",
+        "PRJ-108",
+        "THS-266"
+      ],
+      "precision_at_k": 0.6,
+      "precision_at_k_labeled_types": 1.0,
+      "expected_hit_rate_at_k": 0.2308,
+      "expected_hit_rate_ceiling": 0.3846,
+      "ndcg_at_k": 0.6992,
+      "negative_violations": [],
+      "evidence_coverage": 1.0,
+      "full_traceability": 1.0,
+      "opportunities_valid": true,
+      "latency_ms": 163.59
+    },
+    {
+      "case_id": "CASE-NEED-016",
+      "source_entity_id": "NEED-016",
+      "retrieved": [
+        "PRJ-121",
+        "PRJ-126",
+        "THS-301",
+        "THS-311",
+        "PUB-156"
+      ],
+      "labeled_hits": [
+        "PRJ-121",
+        "PRJ-126",
+        "THS-301",
+        "THS-311",
+        "PUB-156"
+      ],
+      "precision_at_k": 1.0,
+      "precision_at_k_labeled_types": 1.0,
+      "expected_hit_rate_at_k": 0.4167,
+      "expected_hit_rate_ceiling": 0.4167,
+      "ndcg_at_k": 1.0,
+      "negative_violations": [],
+      "evidence_coverage": 1.0,
+      "full_traceability": 1.0,
+      "opportunities_valid": true,
+      "latency_ms": 169.02
+    },
+    {
+      "case_id": "CASE-NEED-017",
+      "source_entity_id": "NEED-017",
+      "retrieved": [
+        "PRJ-129",
+        "PRJ-132",
+        "INV-020",
+        "INV-011",
+        "GRP-004"
+      ],
+      "labeled_hits": [
+        "PRJ-129",
+        "PRJ-132"
+      ],
+      "precision_at_k": 0.4,
+      "precision_at_k_labeled_types": 1.0,
+      "expected_hit_rate_at_k": 0.0769,
+      "expected_hit_rate_ceiling": 0.1923,
+      "ndcg_at_k": 0.5531,
+      "negative_violations": [],
+      "evidence_coverage": 1.0,
+      "full_traceability": 1.0,
+      "opportunities_valid": true,
+      "latency_ms": 157.85
+    }
+  ]
+}

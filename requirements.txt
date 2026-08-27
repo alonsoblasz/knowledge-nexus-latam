@@ -1,0 +1,15 @@
+# Capa de datos (persona 1)
+neo4j>=6,<7
+python-dotenv>=1,<2
+# Motor de recuperación y API (persona 2)
+numpy>=1.26
+PyYAML>=6
+fastapi>=0.115
+uvicorn[standard]>=0.30
+pydantic>=2.7
+# Embeddings semánticos (opcional: sin esta dependencia se usa el proveedor
+# determinista `hashing`, útil para pruebas pero no para la demostración).
+sentence-transformers>=3.0
+# Pruebas
+pytest>=8
+httpx>=0.27
