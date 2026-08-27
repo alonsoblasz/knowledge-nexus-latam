@@ -1,0 +1,49 @@
+{
+  "dataset_root": "C:\\Users\\138542\\OneDrive\\Documentos\\Proyectos\\Hackaton_IA\\KNOWLEDGE_NEXUS_LATAM_DATA_V1_RC2_PARTICIPANTS-20260826T202434Z-1-001\\KNOWLEDGE_NEXUS_LATAM_DATA_V1_RC2_PARTICIPANTS",
+  "validation_valid": true,
+  "nodes": 3327,
+  "edges": 6353,
+  "semantic_documents": 3292,
+  "nodes_by_label": {
+    "Capability": 96,
+    "Competency": 252,
+    "Document": 60,
+    "Expertise": 720,
+    "Faculty": 6,
+    "InstitutionalNeed": 42,
+    "LearningOutcome": 378,
+    "Program": 18,
+    "Project": 320,
+    "Publication": 360,
+    "ResearchGroup": 24,
+    "ResearchLine": 60,
+    "Researcher": 180,
+    "Source": 35,
+    "Subject": 126,
+    "Thesis": 650
+  },
+  "edges_by_type": {
+    "ADVISED_THESIS": 650,
+    "AUTHORED_PUBLICATION": 720,
+    "BELONGS_TO_FACULTY": 539,
+    "BELONGS_TO_GROUP": 60,
+    "BELONGS_TO_PROGRAM": 1348,
+    "DERIVED_FROM_PROJECT": 200,
+    "DESCRIBES": 60,
+    "DEVELOPS_COMPETENCY": 252,
+    "EXECUTED_BY_GROUP": 320,
+    "HAS_EXPERTISE": 720,
+    "HAS_LEARNING_OUTCOME": 378,
+    "MEMBER_OF_GROUP": 180,
+    "PARTICIPATED_IN_PROJECT": 746,
+    "PRIMARY_PROGRAM": 180
+  },
+  "files": {
+    "nodes": "graph_nodes.jsonl",
+    "edges": "graph_edges.jsonl",
+    "semantic_documents": "semantic_documents.jsonl",
+    "quality_report": "data_quality_report.json",
+    "team_fixture_graph": "team_fixture_graph.json",
+    "team_fixture_search_response": "team_fixture_search_response.json"
+  }
+}

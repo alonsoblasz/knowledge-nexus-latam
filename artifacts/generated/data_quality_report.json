@@ -1,0 +1,35 @@
+{
+  "data_root": "C:\\Users\\138542\\OneDrive\\Documentos\\Proyectos\\Hackaton_IA\\KNOWLEDGE_NEXUS_LATAM_DATA_V1_RC2_PARTICIPANTS-20260826T202434Z-1-001\\KNOWLEDGE_NEXUS_LATAM_DATA_V1_RC2_PARTICIPANTS",
+  "valid": true,
+  "summary": {
+    "errors": 0,
+    "warnings": 0,
+    "files": 22,
+    "records": 6143
+  },
+  "counts": {
+    "faculties": 6,
+    "programs": 18,
+    "research_groups": 24,
+    "research_lines": 60,
+    "institutional_capabilities": 96,
+    "source_catalog": 35,
+    "researchers": 180,
+    "researcher_expertise": 720,
+    "subjects": 126,
+    "competencies": 252,
+    "learning_outcomes": 378,
+    "institutional_needs": 42,
+    "projects": 320,
+    "theses": 650,
+    "publications": 360,
+    "researcher_group": 180,
+    "researcher_project": 746,
+    "project_group": 320,
+    "thesis_advisor": 650,
+    "publication_researcher": 720,
+    "publication_project": 200,
+    "documents": 60
+  },
+  "issues": []
+}

@@ -1,0 +1,88 @@
+{
+  "contract_version": "1.0",
+  "fixture_only": true,
+  "warning": "Scores ilustrativos para desarrollar la interfaz; no son salida de un modelo.",
+  "query_entity": {
+    "id": "NEED-001",
+    "type": "InstitutionalNeed",
+    "title": "Predicción y prevención de deserción estudiantil"
+  },
+  "connections": [
+    {
+      "connection_id": "FIXTURE-CONN-001",
+      "source": {
+        "id": "NEED-001",
+        "type": "InstitutionalNeed",
+        "title": "Predicción y prevención de deserción estudiantil"
+      },
+      "target": {
+        "id": "PRJ-002",
+        "type": "Project",
+        "title": "Modelo institucional para riesgo académico y su relación con student attrition"
+      },
+      "relation": "RELEVANT_ANTECEDENT",
+      "relation_origin": "INFERRED_FIXTURE",
+      "relevance": {
+        "total": 0.88,
+        "semantic": 0.92,
+        "domain": 0.9,
+        "method": 0.75,
+        "graph": 0.8,
+        "evidence": 0.95
+      },
+      "explanation": "El proyecto estudia riesgo académico y student attrition mediante analítica educativa, por lo que constituye un antecedente potencial.",
+      "evidence": [
+        {
+          "file": "projects.csv",
+          "row": 3,
+          "record_id": "PRJ-002",
+          "field": "problem_statement",
+          "excerpt": "La información sobre riesgo académico se encuentra distribuida y existen dificultades para relacionarla con student attrition de manera verificable."
+        },
+        {
+          "file": "projects.csv",
+          "row": 3,
+          "record_id": "PRJ-002",
+          "field": "methodology",
+          "excerpt": "Integración de fuentes, preparación de datos, analítica educativa, análisis comparativo y validación de resultados."
+        }
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "opportunity_id": "FIXTURE-OPP-001",
+      "type": "RESEARCH_CONTINUITY",
+      "title": "Sistema explicable de alerta temprana de riesgo académico",
+      "reason": "Continuar antecedentes institucionales y articular experiencia, capacidad computacional y formación existente.",
+      "priority": "HIGH",
+      "related_entities": [
+        {
+          "id": "NEED-001",
+          "type": "InstitutionalNeed",
+          "title": "Predicción y prevención de deserción estudiantil"
+        },
+        {
+          "id": "PRJ-002",
+          "type": "Project",
+          "title": "Modelo institucional para riesgo académico y su relación con student attrition"
+        },
+        {
+          "id": "INV-112",
+          "type": "Researcher",
+          "title": "Laura Martínez Salazar"
+        },
+        {
+          "id": "CAP-002",
+          "type": "Capability",
+          "title": "Analítica y Ciencia de Datos — capacidad 02"
+        },
+        {
+          "id": "SUB-083",
+          "type": "Subject",
+          "title": "Analítica educativa"
+        }
+      ]
+    }
+  ]
+}

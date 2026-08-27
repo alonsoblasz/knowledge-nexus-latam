@@ -1,0 +1,1609 @@
+{
+  "description": "Subgrafo real para desarrollo paralelo; no representa ranking oficial.",
+  "nodes": [
+    {
+      "id": "CAP-002",
+      "label": "Capability",
+      "title": "Analítica y Ciencia de Datos — capacidad 02",
+      "properties": {
+        "capability_id": "CAP-002",
+        "capability_name": "Analítica y Ciencia de Datos — capacidad 02",
+        "capability_type": "COMPUTATIONAL",
+        "description": "Capacidad institucional para analítica y ciencia de datos aplicada a problemas de educación.",
+        "responsible_unit": "FAC-002",
+        "available_resources": [
+          "personal especializado",
+          "infraestructura",
+          "herramientas"
+        ],
+        "application_domains": [
+          "educación",
+          "finanzas"
+        ],
+        "maturity_level": 4,
+        "status": "ACTIVE",
+        "entity_type": "Capability",
+        "source_file": "institutional_capabilities.csv",
+        "source_path": "01_institution/institutional_capabilities.csv",
+        "source_row": 3
+      },
+      "source_file": "institutional_capabilities.csv",
+      "source_row": 3,
+      "semantic_text": "Capacidad: Analítica y Ciencia de Datos — capacidad 02\nTipo de capacidad: COMPUTATIONAL\nDescripción: Capacidad institucional para analítica y ciencia de datos aplicada a problemas de educación.\nRecursos disponibles: personal especializado; infraestructura; herramientas\nDominios de aplicación: educación; finanzas\nNivel de madurez: 4"
+    },
+    {
+      "id": "COM-0165",
+      "label": "Competency",
+      "title": "Analiza conceptos, datos y métodos de analítica educativa para resolver problemas contextualizados con criterios de pertinencia y evidencia.",
+      "properties": {
+        "competency_id": "COM-0165",
+        "program_id": "PRG-012",
+        "subject_id": "SUB-083",
+        "competency_type": "RESEARCH",
+        "description": "Analiza conceptos, datos y métodos de analítica educativa para resolver problemas contextualizados con criterios de pertinencia y evidencia.",
+        "entity_type": "Competency",
+        "source_file": "competencies.csv",
+        "source_path": "02_people_curriculum/competencies.csv",
+        "source_row": 166
+      },
+      "source_file": "competencies.csv",
+      "source_row": 166,
+      "semantic_text": "Tipo de competencia: RESEARCH\nDescripción: Analiza conceptos, datos y métodos de analítica educativa para resolver problemas contextualizados con criterios de pertinencia y evidencia."
+    },
+    {
+      "id": "COM-0166",
+      "label": "Competency",
+      "title": "Integra conceptos, datos y métodos de analítica educativa para resolver problemas contextualizados con criterios de pertinencia y evidencia.",
+      "properties": {
+        "competency_id": "COM-0166",
+        "program_id": "PRG-012",
+        "subject_id": "SUB-083",
+        "competency_type": "PROFESSIONAL",
+        "description": "Integra conceptos, datos y métodos de analítica educativa para resolver problemas contextualizados con criterios de pertinencia y evidencia.",
+        "entity_type": "Competency",
+        "source_file": "competencies.csv",
+        "source_path": "02_people_curriculum/competencies.csv",
+        "source_row": 167
+      },
+      "source_file": "competencies.csv",
+      "source_row": 167,
+      "semantic_text": "Tipo de competencia: PROFESSIONAL\nDescripción: Integra conceptos, datos y métodos de analítica educativa para resolver problemas contextualizados con criterios de pertinencia y evidencia."
+    },
+    {
+      "id": "DOC::institutional_need_001.md",
+      "label": "Document",
+      "title": "institutional_need_001.md",
+      "properties": {
+        "document_id": "DOC::institutional_need_001.md",
+        "file_name": "institutional_need_001.md",
+        "entity_type_described": "NEED",
+        "entity_id_described": "NEED-001",
+        "content": "# Institutional Need — Predicción y prevención de deserción estudiantil\n\n**Need ID:** NEED-001  \n**Priority:** HIGH  \n**Status:** OPEN\n\n## Description\nLa institución requiere fortalecer su capacidad para abordar predicción y prevención de deserción estudiantil mediante el aprovechamiento articulado de información, conocimiento previo y capacidades existentes. El problema se expresa en términos de permanencia estudiantil, riesgo académico y trayectorias educativas, sin prescribir una solución tecnológica específica.\n\n## Context\nNecesidad institucional identificada para mejorar decisiones y articular capacidades relacionadas con permanencia estudiantil.\n\n## Expected institutional impact\nMayor capacidad institucional, trazabilidad de decisiones y generación de oportunidades interdisciplinarias.\n\nThis document intentionally does not prescribe an algorithm, model, or technology.\n",
+        "source_file": "institutional_need_001.md",
+        "source_path": "03_knowledge_needs/documents/institutional_need_001.md",
+        "source_row": 1,
+        "entity_type": "Document"
+      },
+      "source_file": "institutional_need_001.md",
+      "source_row": 1,
+      "semantic_text": "# Institutional Need — Predicción y prevención de deserción estudiantil\n\n**Need ID:** NEED-001  \n**Priority:** HIGH  \n**Status:** OPEN\n\n## Description\nLa institución requiere fortalecer su capacidad para abordar predicción y prevención de deserción estudiantil mediante el aprovechamiento articulado de información, conocimiento previo y capacidades existentes. El problema se expresa en términos de permanencia estudiantil, riesgo académico y trayectorias educativas, sin prescribir una solución tecnológica específica.\n\n## Context\nNecesidad institucional identificada para mejorar decisiones y articular capacidades relacionadas con permanencia estudiantil.\n\n## Expected institutional impact\nMayor capacidad institucional, trazabilidad de decisiones y generación de oportunidades interdisciplinarias.\n\nThis document intentionally does not prescribe an algorithm, model, or technology.\n"
+    },
+    {
+      "id": "DOC::project_profile_002.md",
+      "label": "Document",
+      "title": "project_profile_002.md",
+      "properties": {
+        "document_id": "DOC::project_profile_002.md",
+        "file_name": "project_profile_002.md",
+        "entity_type_described": "PROJECT",
+        "entity_id_described": "PRJ-002",
+        "content": "# Modelo institucional para riesgo académico y su relación con student attrition\n\n**Project ID:** PRJ-002  \n**Status:** COMPLETED  \n**Period:** 2020–2021\n\n## Problem\nLa información sobre riesgo académico se encuentra distribuida y existen dificultades para relacionarla con student attrition de manera verificable.\n\n## Summary\nProyecto orientado a estudiar riesgo académico y su relación con student attrition, integrando evidencia institucional y un enfoque de analítica educativa.\n\n## General objective\nDesarrollar y evaluar un enfoque de analítica educativa que permita analizar riesgo académico y generar evidencia útil para student attrition.\n\n## Methodological notes\nIntegración de fuentes, preparación de datos, analítica educativa, análisis comparativo y validación de resultados.\n\n## Expected results\nSe esperan relaciones priorizadas, evidencia reproducible y orientaciones para decisiones relacionadas con student attrition.\n\n## Institutional context\nstudent attrition\n",
+        "source_file": "project_profile_002.md",
+        "source_path": "03_knowledge_needs/documents/project_profile_002.md",
+        "source_row": 1,
+        "entity_type": "Document"
+      },
+      "source_file": "project_profile_002.md",
+      "source_row": 1,
+      "semantic_text": "# Modelo institucional para riesgo académico y su relación con student attrition\n\n**Project ID:** PRJ-002  \n**Status:** COMPLETED  \n**Period:** 2020–2021\n\n## Problem\nLa información sobre riesgo académico se encuentra distribuida y existen dificultades para relacionarla con student attrition de manera verificable.\n\n## Summary\nProyecto orientado a estudiar riesgo académico y su relación con student attrition, integrando evidencia institucional y un enfoque de analítica educativa.\n\n## General objective\nDesarrollar y evaluar un enfoque de analítica educativa que permita analizar riesgo académico y generar evidencia útil para student attrition.\n\n## Methodological notes\nIntegración de fuentes, preparación de datos, analítica educativa, análisis comparativo y validación de resultados.\n\n## Expected results\nSe esperan relaciones priorizadas, evidencia reproducible y orientaciones para decisiones relacionadas con student attrition.\n\n## Institutional context\nstudent attrition\n"
+    },
+    {
+      "id": "DOC::thesis_summary_002.md",
+      "label": "Document",
+      "title": "thesis_summary_002.md",
+      "properties": {
+        "document_id": "DOC::thesis_summary_002.md",
+        "file_name": "thesis_summary_002.md",
+        "entity_type_described": "THESIS",
+        "entity_id_described": "THS-002",
+        "content": "# Evaluación de modelos longitudinales para analizar riesgo académico\n\n**Thesis ID:** THS-002  \n**Program:** PRG-012  \n**Year:** 2019\n\n## Abstract\nTrabajo de grado que analiza riesgo académico mediante modelos longitudinales, considerando su relación con trayectorias educativas en un contexto universitario o aplicado.\n\n## Problem\nExiste conocimiento disperso sobre riesgo académico y no siempre se comprende su relación con trayectorias educativas.\n\n## Objective\nAnalizar riesgo académico mediante modelos longitudinales para producir evidencia sobre trayectorias educativas.\n\n## Methodology\nRevisión de antecedentes, preparación de datos, modelos longitudinales y validación de resultados.\n\n## Main results\nSe identificaron patrones y hallazgos pertinentes para comprender trayectorias educativas.\n\n## Conclusions\nLos resultados muestran potencial de aplicación, con limitaciones relacionadas con cobertura y contexto.\n",
+        "source_file": "thesis_summary_002.md",
+        "source_path": "03_knowledge_needs/documents/thesis_summary_002.md",
+        "source_row": 1,
+        "entity_type": "Document"
+      },
+      "source_file": "thesis_summary_002.md",
+      "source_row": 1,
+      "semantic_text": "# Evaluación de modelos longitudinales para analizar riesgo académico\n\n**Thesis ID:** THS-002  \n**Program:** PRG-012  \n**Year:** 2019\n\n## Abstract\nTrabajo de grado que analiza riesgo académico mediante modelos longitudinales, considerando su relación con trayectorias educativas en un contexto universitario o aplicado.\n\n## Problem\nExiste conocimiento disperso sobre riesgo académico y no siempre se comprende su relación con trayectorias educativas.\n\n## Objective\nAnalizar riesgo académico mediante modelos longitudinales para producir evidencia sobre trayectorias educativas.\n\n## Methodology\nRevisión de antecedentes, preparación de datos, modelos longitudinales y validación de resultados.\n\n## Main results\nSe identificaron patrones y hallazgos pertinentes para comprender trayectorias educativas.\n\n## Conclusions\nLos resultados muestran potencial de aplicación, con limitaciones relacionadas con cobertura y contexto.\n"
+    },
+    {
+      "id": "EXP-0445",
+      "label": "Expertise",
+      "title": "procesamiento de lenguaje",
+      "properties": {
+        "researcher_id": "INV-112",
+        "expertise_id": "EXP-0445",
+        "expertise_name": "procesamiento de lenguaje",
+        "expertise_type": "DOMAIN",
+        "proficiency_level": 5,
+        "years_experience": 8,
+        "evidence_source": "PROFILE_AND_OUTPUTS",
+        "entity_type": "Expertise",
+        "source_file": "researcher_expertise.csv",
+        "source_path": "02_people_curriculum/researcher_expertise.csv",
+        "source_row": 446
+      },
+      "source_file": "researcher_expertise.csv",
+      "source_row": 446,
+      "semantic_text": "Expertise: procesamiento de lenguaje\nTipo de expertise: DOMAIN\nNivel de dominio: 5\nFuente de evidencia: PROFILE_AND_OUTPUTS"
+    },
+    {
+      "id": "EXP-0446",
+      "label": "Expertise",
+      "title": "permanencia estudiantil",
+      "properties": {
+        "researcher_id": "INV-112",
+        "expertise_id": "EXP-0446",
+        "expertise_name": "permanencia estudiantil",
+        "expertise_type": "DOMAIN",
+        "proficiency_level": 4,
+        "years_experience": 8,
+        "evidence_source": "PROFILE_AND_OUTPUTS",
+        "entity_type": "Expertise",
+        "source_file": "researcher_expertise.csv",
+        "source_path": "02_people_curriculum/researcher_expertise.csv",
+        "source_row": 447
+      },
+      "source_file": "researcher_expertise.csv",
+      "source_row": 447,
+      "semantic_text": "Expertise: permanencia estudiantil\nTipo de expertise: DOMAIN\nNivel de dominio: 4\nFuente de evidencia: PROFILE_AND_OUTPUTS"
+    },
+    {
+      "id": "EXP-0447",
+      "label": "Expertise",
+      "title": "clasificación supervisada",
+      "properties": {
+        "researcher_id": "INV-112",
+        "expertise_id": "EXP-0447",
+        "expertise_name": "clasificación supervisada",
+        "expertise_type": "METHOD",
+        "proficiency_level": 4,
+        "years_experience": 8,
+        "evidence_source": "PROFILE_AND_OUTPUTS",
+        "entity_type": "Expertise",
+        "source_file": "researcher_expertise.csv",
+        "source_path": "02_people_curriculum/researcher_expertise.csv",
+        "source_row": 448
+      },
+      "source_file": "researcher_expertise.csv",
+      "source_row": 448,
+      "semantic_text": "Expertise: clasificación supervisada\nTipo de expertise: METHOD\nNivel de dominio: 4\nFuente de evidencia: PROFILE_AND_OUTPUTS"
+    },
+    {
+      "id": "EXP-0448",
+      "label": "Expertise",
+      "title": "recuperación de información",
+      "properties": {
+        "researcher_id": "INV-112",
+        "expertise_id": "EXP-0448",
+        "expertise_name": "recuperación de información",
+        "expertise_type": "METHOD",
+        "proficiency_level": 4,
+        "years_experience": 8,
+        "evidence_source": "PROFILE_AND_OUTPUTS",
+        "entity_type": "Expertise",
+        "source_file": "researcher_expertise.csv",
+        "source_path": "02_people_curriculum/researcher_expertise.csv",
+        "source_row": 449
+      },
+      "source_file": "researcher_expertise.csv",
+      "source_row": 449,
+      "semantic_text": "Expertise: recuperación de información\nTipo de expertise: METHOD\nNivel de dominio: 4\nFuente de evidencia: PROFILE_AND_OUTPUTS"
+    },
+    {
+      "id": "FAC-004",
+      "label": "Faculty",
+      "title": "Educación y Ciencias Humanas",
+      "properties": {
+        "faculty_id": "FAC-004",
+        "faculty_name": "Educación y Ciencias Humanas",
+        "description": "Aprendizaje, comportamiento humano, innovación pedagógica y currículo.",
+        "strategic_focus": "Innovación educativa; aprendizaje; comportamiento",
+        "active": true,
+        "entity_type": "Faculty",
+        "source_file": "faculties.csv",
+        "source_path": "01_institution/faculties.csv",
+        "source_row": 5
+      },
+      "source_file": "faculties.csv",
+      "source_row": 5,
+      "semantic_text": "Facultad: Educación y Ciencias Humanas\nDescripción: Aprendizaje, comportamiento humano, innovación pedagógica y currículo.\nStrategic focus: Innovación educativa; aprendizaje; comportamiento"
+    },
+    {
+      "id": "GRP-012",
+      "label": "ResearchGroup",
+      "title": "Analítica del Aprendizaje",
+      "properties": {
+        "group_id": "GRP-012",
+        "group_name": "Analítica del Aprendizaje",
+        "faculty_id": "FAC-004",
+        "description": "Investigación aplicada en learning analytics y articulación interdisciplinaria.",
+        "mission": "Generar y transferir conocimiento en learning analytics.",
+        "main_area": "Learning analytics",
+        "interdisciplinary": true,
+        "creation_year": 2011,
+        "status": "ACTIVE",
+        "entity_type": "ResearchGroup",
+        "source_file": "research_groups.csv",
+        "source_path": "01_institution/research_groups.csv",
+        "source_row": 13
+      },
+      "source_file": "research_groups.csv",
+      "source_row": 13,
+      "semantic_text": "Grupo: Analítica del Aprendizaje\nDescripción: Investigación aplicada en learning analytics y articulación interdisciplinaria.\nMission: Generar y transferir conocimiento en learning analytics.\nMain area: Learning analytics"
+    },
+    {
+      "id": "INV-102",
+      "label": "Researcher",
+      "title": "Elena Ortiz Ospina",
+      "properties": {
+        "researcher_id": "INV-102",
+        "full_name": "Elena Ortiz Ospina",
+        "faculty_id": "FAC-004",
+        "primary_program_id": "PRG-012",
+        "academic_background": "PhD en área afín a analítica del aprendizaje; formación profesional relacionada con Ciencias de la Educación.",
+        "profile_summary": "Investigador con experiencia en analítica del aprendizaje y cognición, orientada a resolver problemas aplicados mediante enfoques interdisciplinarios.",
+        "research_interests": [
+          "analítica del aprendizaje",
+          "cognición"
+        ],
+        "methodological_expertise": [
+          "modelamiento estadístico",
+          "diseño experimental"
+        ],
+        "application_domains": [
+          "cognición",
+          "procesamiento de lenguaje"
+        ],
+        "years_experience": 4,
+        "active": true,
+        "entity_type": "Researcher",
+        "source_file": "researchers.csv",
+        "source_path": "02_people_curriculum/researchers.csv",
+        "source_row": 103
+      },
+      "source_file": "researchers.csv",
+      "source_row": 103,
+      "semantic_text": "Investigador: Elena Ortiz Ospina\nFormación académica: PhD en área afín a analítica del aprendizaje; formación profesional relacionada con Ciencias de la Educación.\nPerfil: Investigador con experiencia en analítica del aprendizaje y cognición, orientada a resolver problemas aplicados mediante enfoques interdisciplinarios.\nIntereses de investigación: analítica del aprendizaje; cognición\nExpertise metodológico: modelamiento estadístico; diseño experimental\nDominios de aplicación: cognición; procesamiento de lenguaje"
+    },
+    {
+      "id": "INV-110",
+      "label": "Researcher",
+      "title": "Carolina Rojas Silva",
+      "properties": {
+        "researcher_id": "INV-110",
+        "full_name": "Carolina Rojas Silva",
+        "faculty_id": "FAC-004",
+        "primary_program_id": "PRG-011",
+        "academic_background": "MSc en área afín a cognición; formación profesional relacionada con Psicología.",
+        "profile_summary": "Investigador con experiencia en cognición y permanencia estudiantil, orientada a resolver problemas aplicados mediante enfoques interdisciplinarios.",
+        "research_interests": [
+          "cognición",
+          "permanencia estudiantil"
+        ],
+        "methodological_expertise": [
+          "simulación",
+          "optimización"
+        ],
+        "application_domains": [
+          "permanencia estudiantil",
+          "tecnología educativa"
+        ],
+        "years_experience": 10,
+        "active": true,
+        "entity_type": "Researcher",
+        "source_file": "researchers.csv",
+        "source_path": "02_people_curriculum/researchers.csv",
+        "source_row": 111
+      },
+      "source_file": "researchers.csv",
+      "source_row": 111,
+      "semantic_text": "Investigador: Carolina Rojas Silva\nFormación académica: MSc en área afín a cognición; formación profesional relacionada con Psicología.\nPerfil: Investigador con experiencia en cognición y permanencia estudiantil, orientada a resolver problemas aplicados mediante enfoques interdisciplinarios.\nIntereses de investigación: cognición; permanencia estudiantil\nExpertise metodológico: simulación; optimización\nDominios de aplicación: permanencia estudiantil; tecnología educativa"
+    },
+    {
+      "id": "INV-112",
+      "label": "Researcher",
+      "title": "Laura Martínez Salazar",
+      "properties": {
+        "researcher_id": "INV-112",
+        "full_name": "Laura Martínez Salazar",
+        "faculty_id": "FAC-004",
+        "primary_program_id": "PRG-010",
+        "academic_background": "PhD en área afín a procesamiento de lenguaje; formación profesional relacionada con Licenciatura en Tecnología e Informática.",
+        "profile_summary": "Investigador con experiencia en procesamiento de lenguaje y permanencia estudiantil, orientada a resolver problemas aplicados mediante enfoques interdisciplinarios.",
+        "research_interests": [
+          "procesamiento de lenguaje",
+          "permanencia estudiantil"
+        ],
+        "methodological_expertise": [
+          "clasificación supervisada",
+          "recuperación de información"
+        ],
+        "application_domains": [
+          "permanencia estudiantil",
+          "permanencia estudiantil"
+        ],
+        "years_experience": 16,
+        "active": true,
+        "entity_type": "Researcher",
+        "source_file": "researchers.csv",
+        "source_path": "02_people_curriculum/researchers.csv",
+        "source_row": 113
+      },
+      "source_file": "researchers.csv",
+      "source_row": 113,
+      "semantic_text": "Investigador: Laura Martínez Salazar\nFormación académica: PhD en área afín a procesamiento de lenguaje; formación profesional relacionada con Licenciatura en Tecnología e Informática.\nPerfil: Investigador con experiencia en procesamiento de lenguaje y permanencia estudiantil, orientada a resolver problemas aplicados mediante enfoques interdisciplinarios.\nIntereses de investigación: procesamiento de lenguaje; permanencia estudiantil\nExpertise metodológico: clasificación supervisada; recuperación de información\nDominios de aplicación: permanencia estudiantil; permanencia estudiantil"
+    },
+    {
+      "id": "LO-0247",
+      "label": "LearningOutcome",
+      "title": "Aplica principios y herramientas de analítica educativa para interpretar información y construir respuestas verificables en un contexto aplicado.",
+      "properties": {
+        "outcome_id": "LO-0247",
+        "subject_id": "SUB-083",
+        "outcome_description": "Aplica principios y herramientas de analítica educativa para interpretar información y construir respuestas verificables en un contexto aplicado.",
+        "cognitive_level": "Apply",
+        "evidence_type": "estudio de caso",
+        "entity_type": "LearningOutcome",
+        "source_file": "learning_outcomes.csv",
+        "source_path": "02_people_curriculum/learning_outcomes.csv",
+        "source_row": 248
+      },
+      "source_file": "learning_outcomes.csv",
+      "source_row": 248,
+      "semantic_text": "Resultado de aprendizaje: Aplica principios y herramientas de analítica educativa para interpretar información y construir respuestas verificables en un contexto aplicado.\nNivel cognitivo: Apply\nTipo de evidencia: estudio de caso"
+    },
+    {
+      "id": "LO-0248",
+      "label": "LearningOutcome",
+      "title": "Analiza principios y herramientas de analítica educativa para interpretar información y construir respuestas verificables en un contexto aplicado.",
+      "properties": {
+        "outcome_id": "LO-0248",
+        "subject_id": "SUB-083",
+        "outcome_description": "Analiza principios y herramientas de analítica educativa para interpretar información y construir respuestas verificables en un contexto aplicado.",
+        "cognitive_level": "Analyze",
+        "evidence_type": "prototipo",
+        "entity_type": "LearningOutcome",
+        "source_file": "learning_outcomes.csv",
+        "source_path": "02_people_curriculum/learning_outcomes.csv",
+        "source_row": 249
+      },
+      "source_file": "learning_outcomes.csv",
+      "source_row": 249,
+      "semantic_text": "Resultado de aprendizaje: Analiza principios y herramientas de analítica educativa para interpretar información y construir respuestas verificables en un contexto aplicado.\nNivel cognitivo: Analyze\nTipo de evidencia: prototipo"
+    },
+    {
+      "id": "LO-0249",
+      "label": "LearningOutcome",
+      "title": "Diseña principios y herramientas de analítica educativa para interpretar información y construir respuestas verificables en un contexto aplicado.",
+      "properties": {
+        "outcome_id": "LO-0249",
+        "subject_id": "SUB-083",
+        "outcome_description": "Diseña principios y herramientas de analítica educativa para interpretar información y construir respuestas verificables en un contexto aplicado.",
+        "cognitive_level": "Create",
+        "evidence_type": "proyecto aplicado",
+        "entity_type": "LearningOutcome",
+        "source_file": "learning_outcomes.csv",
+        "source_path": "02_people_curriculum/learning_outcomes.csv",
+        "source_row": 250
+      },
+      "source_file": "learning_outcomes.csv",
+      "source_row": 250,
+      "semantic_text": "Resultado de aprendizaje: Diseña principios y herramientas de analítica educativa para interpretar información y construir respuestas verificables en un contexto aplicado.\nNivel cognitivo: Create\nTipo de evidencia: proyecto aplicado"
+    },
+    {
+      "id": "NEED-001",
+      "label": "InstitutionalNeed",
+      "title": "Predicción y prevención de deserción estudiantil",
+      "properties": {
+        "need_id": "NEED-001",
+        "title": "Predicción y prevención de deserción estudiantil",
+        "description": "La institución requiere fortalecer su capacidad para abordar predicción y prevención de deserción estudiantil mediante el aprovechamiento articulado de información, conocimiento previo y capacidades existentes. El problema se expresa en términos de permanencia estudiantil, riesgo académico y trayectorias educativas, sin prescribir una solución tecnológica específica.",
+        "originating_unit": "Unidad asociada a FAC-004",
+        "context": "Necesidad institucional identificada para mejorar decisiones y articular capacidades relacionadas con permanencia estudiantil.",
+        "expected_impact": "Mayor capacidad institucional, trazabilidad de decisiones y generación de oportunidades interdisciplinarias.",
+        "priority": "HIGH",
+        "year": 2026,
+        "status": "OPEN",
+        "entity_type": "InstitutionalNeed",
+        "source_file": "institutional_needs.csv",
+        "source_path": "03_knowledge_needs/institutional_needs.csv",
+        "source_row": 2
+      },
+      "source_file": "institutional_needs.csv",
+      "source_row": 2,
+      "semantic_text": "Título: Predicción y prevención de deserción estudiantil\nDescripción: La institución requiere fortalecer su capacidad para abordar predicción y prevención de deserción estudiantil mediante el aprovechamiento articulado de información, conocimiento previo y capacidades existentes. El problema se expresa en términos de permanencia estudiantil, riesgo académico y trayectorias educativas, sin prescribir una solución tecnológica específica.\nContexto: Necesidad institucional identificada para mejorar decisiones y articular capacidades relacionadas con permanencia estudiantil.\nImpacto esperado: Mayor capacidad institucional, trazabilidad de decisiones y generación de oportunidades interdisciplinarias.\nPrioridad: HIGH"
+    },
+    {
+      "id": "PRG-010",
+      "label": "Program",
+      "title": "Licenciatura en Tecnología e Informática",
+      "properties": {
+        "program_id": "PRG-010",
+        "faculty_id": "FAC-004",
+        "program_name": "Licenciatura en Tecnología e Informática",
+        "academic_level": "Pregrado",
+        "description": "Programa de Licenciatura en Tecnología e Informática orientado a investigación aplicada, innovación y resolución de problemas interdisciplinarios.",
+        "disciplinary_area": "Licenciatura en Tecnología e Informática",
+        "graduate_profile": "Profesional capaz de integrar evidencia y diseñar soluciones pertinentes en licenciatura en tecnología e informática.",
+        "strategic_topics": [
+          "Investigación aplicada",
+          "innovación",
+          "transformación institucional"
+        ],
+        "active": true,
+        "entity_type": "Program",
+        "source_file": "programs.csv",
+        "source_path": "01_institution/programs.csv",
+        "source_row": 11
+      },
+      "source_file": "programs.csv",
+      "source_row": 11,
+      "semantic_text": "Programa: Licenciatura en Tecnología e Informática\nDescripción: Programa de Licenciatura en Tecnología e Informática orientado a investigación aplicada, innovación y resolución de problemas interdisciplinarios.\nÁrea disciplinar: Licenciatura en Tecnología e Informática\nPerfil de egreso: Profesional capaz de integrar evidencia y diseñar soluciones pertinentes en licenciatura en tecnología e informática.\nTemas estratégicos: Investigación aplicada; innovación; transformación institucional"
+    },
+    {
+      "id": "PRG-012",
+      "label": "Program",
+      "title": "Ciencias de la Educación",
+      "properties": {
+        "program_id": "PRG-012",
+        "faculty_id": "FAC-004",
+        "program_name": "Ciencias de la Educación",
+        "academic_level": "Pregrado",
+        "description": "Programa de Ciencias de la Educación orientado a investigación aplicada, innovación y resolución de problemas interdisciplinarios.",
+        "disciplinary_area": "Ciencias de la Educación",
+        "graduate_profile": "Profesional capaz de integrar evidencia y diseñar soluciones pertinentes en ciencias de la educación.",
+        "strategic_topics": [
+          "Investigación aplicada",
+          "innovación",
+          "transformación institucional"
+        ],
+        "active": true,
+        "entity_type": "Program",
+        "source_file": "programs.csv",
+        "source_path": "01_institution/programs.csv",
+        "source_row": 13
+      },
+      "source_file": "programs.csv",
+      "source_row": 13,
+      "semantic_text": "Programa: Ciencias de la Educación\nDescripción: Programa de Ciencias de la Educación orientado a investigación aplicada, innovación y resolución de problemas interdisciplinarios.\nÁrea disciplinar: Ciencias de la Educación\nPerfil de egreso: Profesional capaz de integrar evidencia y diseñar soluciones pertinentes en ciencias de la educación.\nTemas estratégicos: Investigación aplicada; innovación; transformación institucional"
+    },
+    {
+      "id": "PRJ-002",
+      "label": "Project",
+      "title": "Modelo institucional para riesgo académico y su relación con student attrition",
+      "properties": {
+        "project_id": "PRJ-002",
+        "title": "Modelo institucional para riesgo académico y su relación con student attrition",
+        "project_type": "APPLIED_RESEARCH",
+        "status": "COMPLETED",
+        "problem_statement": "La información sobre riesgo académico se encuentra distribuida y existen dificultades para relacionarla con student attrition de manera verificable.",
+        "abstract": "Proyecto orientado a estudiar riesgo académico y su relación con student attrition, integrando evidencia institucional y un enfoque de analítica educativa.",
+        "general_objective": "Desarrollar y evaluar un enfoque de analítica educativa que permita analizar riesgo académico y generar evidencia útil para student attrition.",
+        "methodology": "Integración de fuentes, preparación de datos, analítica educativa, análisis comparativo y validación de resultados.",
+        "expected_results": "Se esperan relaciones priorizadas, evidencia reproducible y orientaciones para decisiones relacionadas con student attrition.",
+        "application_context": "student attrition",
+        "faculty_id": "FAC-004",
+        "program_id": "PRG-012",
+        "group_id": "GRP-012",
+        "start_year": 2020,
+        "end_year": 2021,
+        "keywords": [
+          "riesgo académico",
+          "analítica educativa",
+          "student attrition"
+        ],
+        "disciplinary_area": "Ciencias de la Educación",
+        "funding_type": "EXTERNAL_PARTNER",
+        "source_document": "project_profile_002.md",
+        "entity_type": "Project",
+        "source_file": "projects.csv",
+        "source_path": "03_knowledge_needs/projects.csv",
+        "source_row": 3
+      },
+      "source_file": "projects.csv",
+      "source_row": 3,
+      "semantic_text": "Título: Modelo institucional para riesgo académico y su relación con student attrition\nProblema: La información sobre riesgo académico se encuentra distribuida y existen dificultades para relacionarla con student attrition de manera verificable.\nResumen: Proyecto orientado a estudiar riesgo académico y su relación con student attrition, integrando evidencia institucional y un enfoque de analítica educativa.\nObjetivo: Desarrollar y evaluar un enfoque de analítica educativa que permita analizar riesgo académico y generar evidencia útil para student attrition.\nMetodología: Integración de fuentes, preparación de datos, analítica educativa, análisis comparativo y validación de resultados.\nResultados esperados: Se esperan relaciones priorizadas, evidencia reproducible y orientaciones para decisiones relacionadas con student attrition.\nContexto de aplicación: student attrition\nPalabras clave: riesgo académico;analítica educativa;student attrition\nÁrea disciplinar: Ciencias de la Educación"
+    },
+    {
+      "id": "PRJ-016",
+      "label": "Project",
+      "title": "Secuencias De Aprendizaje: an applied study for perfil del estudiante",
+      "properties": {
+        "project_id": "PRJ-016",
+        "title": "Secuencias De Aprendizaje: an applied study for perfil del estudiante",
+        "project_type": "APPLIED_RESEARCH",
+        "status": "COMPLETED",
+        "problem_statement": "Existing information about secuencias de aprendizaje is fragmented across academic and institutional sources, limiting timely analysis.",
+        "abstract": "This project investigates secuencias de aprendizaje in relation to perfil del estudiante, using analítica educativa. It focuses on institutional evidence and reproducible decision support.",
+        "general_objective": "Develop and evaluate an approach based on analítica educativa to connect evidence related to secuencias de aprendizaje and perfil del estudiante.",
+        "methodology": "Applied study combining data integration, analítica educativa, validation and traceable analysis.",
+        "expected_results": "Expected outputs include validated evidence, prioritized findings and a reproducible analytical component.",
+        "application_context": "perfil del estudiante",
+        "faculty_id": "FAC-004",
+        "program_id": "PRG-011",
+        "group_id": "GRP-013",
+        "start_year": 2018,
+        "end_year": 2019,
+        "keywords": [
+          "secuencias de aprendizaje",
+          "analítica educativa",
+          "perfil del estudiante"
+        ],
+        "disciplinary_area": "Psicología",
+        "funding_type": "INTERNAL",
+        "source_document": "project_profile_016.md",
+        "entity_type": "Project",
+        "source_file": "projects.csv",
+        "source_path": "03_knowledge_needs/projects.csv",
+        "source_row": 17
+      },
+      "source_file": "projects.csv",
+      "source_row": 17,
+      "semantic_text": "Título: Secuencias De Aprendizaje: an applied study for perfil del estudiante\nProblema: Existing information about secuencias de aprendizaje is fragmented across academic and institutional sources, limiting timely analysis.\nResumen: This project investigates secuencias de aprendizaje in relation to perfil del estudiante, using analítica educativa. It focuses on institutional evidence and reproducible decision support.\nObjetivo: Develop and evaluate an approach based on analítica educativa to connect evidence related to secuencias de aprendizaje and perfil del estudiante.\nMetodología: Applied study combining data integration, analítica educativa, validation and traceable analysis.\nResultados esperados: Expected outputs include validated evidence, prioritized findings and a reproducible analytical component.\nContexto de aplicación: perfil del estudiante\nPalabras clave: secuencias de aprendizaje;analítica educativa;perfil del estudiante\nÁrea disciplinar: Psicología"
+    },
+    {
+      "id": "PRJ-206",
+      "label": "Project",
+      "title": "Gestión de proyectos mediante modelamiento estadístico",
+      "properties": {
+        "project_id": "PRJ-206",
+        "title": "Gestión de proyectos mediante modelamiento estadístico",
+        "project_type": "INNOVATION",
+        "status": "ACTIVE",
+        "problem_statement": "Se identifican limitaciones institucionales asociadas a gestión de proyectos, con información distribuida entre varias fuentes.",
+        "abstract": "El proyecto analiza gestión de proyectos desde una perspectiva aplicada y contextual, empleando modelamiento estadístico.",
+        "general_objective": "Evaluar alternativas para mejorar gestión de proyectos mediante evidencia institucional.",
+        "methodology": "Recolección de información, modelamiento estadístico, validación y análisis de resultados.",
+        "expected_results": "Resultados esperados relacionados con mejora de procesos, evidencia y recomendaciones aplicadas.",
+        "application_context": "gestión de proyectos",
+        "faculty_id": "FAC-004",
+        "program_id": "PRG-011",
+        "group_id": "GRP-013",
+        "start_year": 2022,
+        "end_year": 2023,
+        "keywords": [
+          "gestión de proyectos",
+          "modelamiento estadístico"
+        ],
+        "disciplinary_area": "Psicología",
+        "funding_type": "EXTERNAL_PARTNER",
+        "entity_type": "Project",
+        "source_file": "projects.csv",
+        "source_path": "03_knowledge_needs/projects.csv",
+        "source_row": 207
+      },
+      "source_file": "projects.csv",
+      "source_row": 207,
+      "semantic_text": "Título: Gestión de proyectos mediante modelamiento estadístico\nProblema: Se identifican limitaciones institucionales asociadas a gestión de proyectos, con información distribuida entre varias fuentes.\nResumen: El proyecto analiza gestión de proyectos desde una perspectiva aplicada y contextual, empleando modelamiento estadístico.\nObjetivo: Evaluar alternativas para mejorar gestión de proyectos mediante evidencia institucional.\nMetodología: Recolección de información, modelamiento estadístico, validación y análisis de resultados.\nResultados esperados: Resultados esperados relacionados con mejora de procesos, evidencia y recomendaciones aplicadas.\nContexto de aplicación: gestión de proyectos\nPalabras clave: gestión de proyectos;modelamiento estadístico\nÁrea disciplinar: Psicología"
+    },
+    {
+      "id": "PUB-002",
+      "label": "Publication",
+      "title": "Riesgo académico: evidencia aplicada mediante analítica educativa",
+      "properties": {
+        "publication_id": "PUB-002",
+        "title": "Riesgo académico: evidencia aplicada mediante analítica educativa",
+        "abstract": "Publicación que reporta resultados aplicados sobre riesgo académico mediante analítica educativa, con énfasis en evidencia trazable y validación contextual.",
+        "year": 2020,
+        "publication_type": "ARTICLE",
+        "researchers": "INV-116;INV-101",
+        "keywords": [
+          "riesgo académico",
+          "analítica educativa"
+        ],
+        "journal_or_event": "Journal of Applied Nexus Studies",
+        "related_project_id": "PRJ-002",
+        "entity_type": "Publication",
+        "source_file": "publications.csv",
+        "source_path": "03_knowledge_needs/publications.csv",
+        "source_row": 3
+      },
+      "source_file": "publications.csv",
+      "source_row": 3,
+      "semantic_text": "Título: Riesgo académico: evidencia aplicada mediante analítica educativa\nResumen: Publicación que reporta resultados aplicados sobre riesgo académico mediante analítica educativa, con énfasis en evidencia trazable y validación contextual.\nPalabras clave: riesgo académico;analítica educativa\nTipo de publicación: ARTICLE\nRevista o evento: Journal of Applied Nexus Studies"
+    },
+    {
+      "id": "PUB-010",
+      "label": "Publication",
+      "title": "Acompañamiento Temprano using clasificación supervisada: evidence from a Latin American university",
+      "properties": {
+        "publication_id": "PUB-010",
+        "title": "Acompañamiento Temprano using clasificación supervisada: evidence from a Latin American university",
+        "abstract": "This publication reports an applied study on acompañamiento temprano using clasificación supervisada, emphasizing traceable evidence and contextual validation.",
+        "year": 2019,
+        "publication_type": "ARTICLE",
+        "researchers": "INV-101;INV-127",
+        "keywords": [
+          "acompañamiento temprano",
+          "clasificación supervisada"
+        ],
+        "journal_or_event": "Journal of Applied Nexus Studies",
+        "related_project_id": "PRJ-002",
+        "entity_type": "Publication",
+        "source_file": "publications.csv",
+        "source_path": "03_knowledge_needs/publications.csv",
+        "source_row": 11
+      },
+      "source_file": "publications.csv",
+      "source_row": 11,
+      "semantic_text": "Título: Acompañamiento Temprano using clasificación supervisada: evidence from a Latin American university\nResumen: This publication reports an applied study on acompañamiento temprano using clasificación supervisada, emphasizing traceable evidence and contextual validation.\nPalabras clave: acompañamiento temprano;clasificación supervisada\nTipo de publicación: ARTICLE\nRevista o evento: Journal of Applied Nexus Studies"
+    },
+    {
+      "id": "PUB-018",
+      "label": "Publication",
+      "title": "Secuencias de aprendizaje: evidencia aplicada mediante analítica educativa",
+      "properties": {
+        "publication_id": "PUB-018",
+        "title": "Secuencias de aprendizaje: evidencia aplicada mediante analítica educativa",
+        "abstract": "Publicación que reporta resultados aplicados sobre secuencias de aprendizaje mediante analítica educativa, con énfasis en evidencia trazable y validación contextual.",
+        "year": 2018,
+        "publication_type": "ARTICLE",
+        "researchers": "INV-108;INV-112",
+        "keywords": [
+          "secuencias de aprendizaje",
+          "analítica educativa"
+        ],
+        "journal_or_event": "Journal of Applied Nexus Studies",
+        "related_project_id": "PRJ-016",
+        "entity_type": "Publication",
+        "source_file": "publications.csv",
+        "source_path": "03_knowledge_needs/publications.csv",
+        "source_row": 19
+      },
+      "source_file": "publications.csv",
+      "source_row": 19,
+      "semantic_text": "Título: Secuencias de aprendizaje: evidencia aplicada mediante analítica educativa\nResumen: Publicación que reporta resultados aplicados sobre secuencias de aprendizaje mediante analítica educativa, con énfasis en evidencia trazable y validación contextual.\nPalabras clave: secuencias de aprendizaje;analítica educativa\nTipo de publicación: ARTICLE\nRevista o evento: Journal of Applied Nexus Studies"
+    },
+    {
+      "id": "PUB-210",
+      "label": "Publication",
+      "title": "Resultados aplicados en comunicación organizacional",
+      "properties": {
+        "publication_id": "PUB-210",
+        "title": "Resultados aplicados en comunicación organizacional",
+        "abstract": "Artículo que sintetiza hallazgos sobre comunicación organizacional en un contexto institucional.",
+        "year": 2026,
+        "publication_type": "ARTICLE",
+        "researchers": "INV-122;INV-112",
+        "keywords": [
+          "comunicación organizacional"
+        ],
+        "journal_or_event": "Revista Latinoamericana de Investigación Aplicada",
+        "entity_type": "Publication",
+        "source_file": "publications.csv",
+        "source_path": "03_knowledge_needs/publications.csv",
+        "source_row": 211
+      },
+      "source_file": "publications.csv",
+      "source_row": 211,
+      "semantic_text": "Título: Resultados aplicados en comunicación organizacional\nResumen: Artículo que sintetiza hallazgos sobre comunicación organizacional en un contexto institucional.\nPalabras clave: comunicación organizacional\nTipo de publicación: ARTICLE\nRevista o evento: Revista Latinoamericana de Investigación Aplicada"
+    },
+    {
+      "id": "SUB-083",
+      "label": "Subject",
+      "title": "Analítica educativa",
+      "properties": {
+        "subject_id": "SUB-083",
+        "program_id": "PRG-012",
+        "subject_name": "Analítica educativa",
+        "semester": 6,
+        "credits": 3,
+        "description": "Asignatura orientada a comprender y aplicar analítica educativa en problemas propios de Ciencias de la Educación y contextos interdisciplinarios.",
+        "purpose": "Desarrollar capacidad para analizar evidencia, seleccionar métodos y proponer soluciones relacionadas con analítica educativa.",
+        "main_topics": [
+          "Analítica educativa",
+          "análisis aplicado",
+          "integración de evidencia"
+        ],
+        "disciplinary_area": "Ciencias de la Educación",
+        "active": true,
+        "entity_type": "Subject",
+        "source_file": "subjects.csv",
+        "source_path": "02_people_curriculum/subjects.csv",
+        "source_row": 84
+      },
+      "source_file": "subjects.csv",
+      "source_row": 84,
+      "semantic_text": "Asignatura: Analítica educativa\nDescripción: Asignatura orientada a comprender y aplicar analítica educativa en problemas propios de Ciencias de la Educación y contextos interdisciplinarios.\nPropósito: Desarrollar capacidad para analizar evidencia, seleccionar métodos y proponer soluciones relacionadas con analítica educativa.\nTemas principales: Analítica educativa; análisis aplicado; integración de evidencia\nÁrea disciplinar: Ciencias de la Educación"
+    },
+    {
+      "id": "THS-002",
+      "label": "Thesis",
+      "title": "Evaluación de modelos longitudinales para analizar riesgo académico",
+      "properties": {
+        "thesis_id": "THS-002",
+        "title": "Evaluación de modelos longitudinales para analizar riesgo académico",
+        "abstract": "Trabajo de grado que analiza riesgo académico mediante modelos longitudinales, considerando su relación con trayectorias educativas en un contexto universitario o aplicado.",
+        "problem_statement": "Existe conocimiento disperso sobre riesgo académico y no siempre se comprende su relación con trayectorias educativas.",
+        "general_objective": "Analizar riesgo académico mediante modelos longitudinales para producir evidencia sobre trayectorias educativas.",
+        "methodology": "Revisión de antecedentes, preparación de datos, modelos longitudinales y validación de resultados.",
+        "main_results": "Se identificaron patrones y hallazgos pertinentes para comprender trayectorias educativas.",
+        "conclusions": "Los resultados muestran potencial de aplicación, con limitaciones relacionadas con cobertura y contexto.",
+        "program_id": "PRG-012",
+        "graduation_year": 2019,
+        "keywords": [
+          "riesgo académico",
+          "trayectorias educativas",
+          "modelos longitudinales"
+        ],
+        "status": "APPROVED",
+        "repository_reference": "repo://thesis/002",
+        "research_area": "Ciencias de la Educación",
+        "application_context": "trayectorias educativas",
+        "data_or_population": "synthetic institutional data",
+        "entity_type": "Thesis",
+        "source_file": "theses.csv",
+        "source_path": "03_knowledge_needs/theses.csv",
+        "source_row": 3
+      },
+      "source_file": "theses.csv",
+      "source_row": 3,
+      "semantic_text": "Título: Evaluación de modelos longitudinales para analizar riesgo académico\nResumen: Trabajo de grado que analiza riesgo académico mediante modelos longitudinales, considerando su relación con trayectorias educativas en un contexto universitario o aplicado.\nProblema: Existe conocimiento disperso sobre riesgo académico y no siempre se comprende su relación con trayectorias educativas.\nObjetivo: Analizar riesgo académico mediante modelos longitudinales para producir evidencia sobre trayectorias educativas.\nMetodología: Revisión de antecedentes, preparación de datos, modelos longitudinales y validación de resultados.\nResultados principales: Se identificaron patrones y hallazgos pertinentes para comprender trayectorias educativas.\nConclusiones: Los resultados muestran potencial de aplicación, con limitaciones relacionadas con cobertura y contexto.\nPalabras clave: riesgo académico;trayectorias educativas;modelos longitudinales\nÁrea de investigación: Ciencias de la Educación\nContexto de aplicación: trayectorias educativas\nDatos o población: synthetic institutional data"
+    },
+    {
+      "id": "THS-057",
+      "label": "Thesis",
+      "title": "Caracterización de evidencias de aprendizaje en relación con evaluación formativa",
+      "properties": {
+        "thesis_id": "THS-057",
+        "title": "Caracterización de evidencias de aprendizaje en relación con evaluación formativa",
+        "abstract": "Trabajo de grado que analiza evidencias de aprendizaje mediante analítica curricular, considerando su relación con evaluación formativa en un contexto universitario o aplicado.",
+        "problem_statement": "Existe conocimiento disperso sobre evidencias de aprendizaje y no siempre se comprende su relación con evaluación formativa.",
+        "general_objective": "Analizar evidencias de aprendizaje mediante analítica curricular para producir evidencia sobre evaluación formativa.",
+        "methodology": "Revisión de antecedentes, preparación de datos, analítica curricular y validación de resultados.",
+        "main_results": "Se identificaron patrones y hallazgos pertinentes para comprender evaluación formativa.",
+        "conclusions": "Los resultados muestran potencial de aplicación, con limitaciones relacionadas con cobertura y contexto.",
+        "program_id": "PRG-010",
+        "graduation_year": 2026,
+        "keywords": [
+          "evidencias de aprendizaje",
+          "evaluación formativa",
+          "analítica curricular"
+        ],
+        "status": "APPROVED",
+        "repository_reference": "repo://thesis/057",
+        "research_area": "Licenciatura en Tecnología e Informática",
+        "application_context": "evaluación formativa",
+        "data_or_population": "synthetic institutional data",
+        "entity_type": "Thesis",
+        "source_file": "theses.csv",
+        "source_path": "03_knowledge_needs/theses.csv",
+        "source_row": 58
+      },
+      "source_file": "theses.csv",
+      "source_row": 58,
+      "semantic_text": "Título: Caracterización de evidencias de aprendizaje en relación con evaluación formativa\nResumen: Trabajo de grado que analiza evidencias de aprendizaje mediante analítica curricular, considerando su relación con evaluación formativa en un contexto universitario o aplicado.\nProblema: Existe conocimiento disperso sobre evidencias de aprendizaje y no siempre se comprende su relación con evaluación formativa.\nObjetivo: Analizar evidencias de aprendizaje mediante analítica curricular para producir evidencia sobre evaluación formativa.\nMetodología: Revisión de antecedentes, preparación de datos, analítica curricular y validación de resultados.\nResultados principales: Se identificaron patrones y hallazgos pertinentes para comprender evaluación formativa.\nConclusiones: Los resultados muestran potencial de aplicación, con limitaciones relacionadas con cobertura y contexto.\nPalabras clave: evidencias de aprendizaje;evaluación formativa;analítica curricular\nÁrea de investigación: Licenciatura en Tecnología e Informática\nContexto de aplicación: evaluación formativa\nDatos o población: synthetic institutional data"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "COM-0165",
+      "source_label": "Competency",
+      "relationship": "BELONGS_TO_PROGRAM",
+      "target_id": "PRG-012",
+      "target_label": "Program",
+      "properties": {},
+      "provenance": [
+        {
+          "file": "02_people_curriculum/competencies.csv",
+          "row": 166,
+          "field": "program_id"
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "COM-0166",
+      "source_label": "Competency",
+      "relationship": "BELONGS_TO_PROGRAM",
+      "target_id": "PRG-012",
+      "target_label": "Program",
+      "properties": {},
+      "provenance": [
+        {
+          "file": "02_people_curriculum/competencies.csv",
+          "row": 167,
+          "field": "program_id"
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "DOC::institutional_need_001.md",
+      "source_label": "Document",
+      "relationship": "DESCRIBES",
+      "target_id": "NEED-001",
+      "target_label": "InstitutionalNeed",
+      "properties": {},
+      "provenance": [
+        {
+          "file": "03_knowledge_needs/document_catalog.csv",
+          "row": 52,
+          "fields": [
+            "file_name",
+            "entity_id"
+          ]
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "DOC::project_profile_002.md",
+      "source_label": "Document",
+      "relationship": "DESCRIBES",
+      "target_id": "PRJ-002",
+      "target_label": "Project",
+      "properties": {},
+      "provenance": [
+        {
+          "file": "03_knowledge_needs/document_catalog.csv",
+          "row": 3,
+          "fields": [
+            "file_name",
+            "entity_id"
+          ]
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "DOC::thesis_summary_002.md",
+      "source_label": "Document",
+      "relationship": "DESCRIBES",
+      "target_id": "THS-002",
+      "target_label": "Thesis",
+      "properties": {},
+      "provenance": [
+        {
+          "file": "03_knowledge_needs/document_catalog.csv",
+          "row": 33,
+          "fields": [
+            "file_name",
+            "entity_id"
+          ]
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "GRP-012",
+      "source_label": "ResearchGroup",
+      "relationship": "BELONGS_TO_FACULTY",
+      "target_id": "FAC-004",
+      "target_label": "Faculty",
+      "properties": {},
+      "provenance": [
+        {
+          "file": "01_institution/research_groups.csv",
+          "row": 13,
+          "field": "faculty_id"
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "INV-102",
+      "source_label": "Researcher",
+      "relationship": "ADVISED_THESIS",
+      "target_id": "THS-002",
+      "target_label": "Thesis",
+      "properties": {
+        "role": "ADVISOR"
+      },
+      "provenance": [
+        {
+          "file": "03_knowledge_needs/thesis_advisor.csv",
+          "row": 3,
+          "fields": [
+            "researcher_id",
+            "thesis_id"
+          ]
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "INV-102",
+      "source_label": "Researcher",
+      "relationship": "BELONGS_TO_FACULTY",
+      "target_id": "FAC-004",
+      "target_label": "Faculty",
+      "properties": {},
+      "provenance": [
+        {
+          "file": "02_people_curriculum/researchers.csv",
+          "row": 103,
+          "field": "faculty_id"
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "INV-102",
+      "source_label": "Researcher",
+      "relationship": "MEMBER_OF_GROUP",
+      "target_id": "GRP-012",
+      "target_label": "ResearchGroup",
+      "properties": {
+        "role": "MEMBER"
+      },
+      "provenance": [
+        {
+          "file": "02_people_curriculum/researcher_group.csv",
+          "row": 103,
+          "fields": [
+            "researcher_id",
+            "group_id"
+          ]
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "INV-102",
+      "source_label": "Researcher",
+      "relationship": "PRIMARY_PROGRAM",
+      "target_id": "PRG-012",
+      "target_label": "Program",
+      "properties": {},
+      "provenance": [
+        {
+          "file": "02_people_curriculum/researchers.csv",
+          "row": 103,
+          "field": "primary_program_id"
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "INV-110",
+      "source_label": "Researcher",
+      "relationship": "BELONGS_TO_FACULTY",
+      "target_id": "FAC-004",
+      "target_label": "Faculty",
+      "properties": {},
+      "provenance": [
+        {
+          "file": "02_people_curriculum/researchers.csv",
+          "row": 111,
+          "field": "faculty_id"
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "INV-110",
+      "source_label": "Researcher",
+      "relationship": "MEMBER_OF_GROUP",
+      "target_id": "GRP-012",
+      "target_label": "ResearchGroup",
+      "properties": {
+        "role": "MEMBER"
+      },
+      "provenance": [
+        {
+          "file": "02_people_curriculum/researcher_group.csv",
+          "row": 111,
+          "fields": [
+            "researcher_id",
+            "group_id"
+          ]
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "INV-110",
+      "source_label": "Researcher",
+      "relationship": "PARTICIPATED_IN_PROJECT",
+      "target_id": "PRJ-002",
+      "target_label": "Project",
+      "properties": {
+        "role": "CO_INVESTIGATOR"
+      },
+      "provenance": [
+        {
+          "file": "03_knowledge_needs/researcher_project.csv",
+          "row": 5,
+          "fields": [
+            "researcher_id",
+            "project_id"
+          ]
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "INV-112",
+      "source_label": "Researcher",
+      "relationship": "ADVISED_THESIS",
+      "target_id": "THS-057",
+      "target_label": "Thesis",
+      "properties": {
+        "role": "ADVISOR"
+      },
+      "provenance": [
+        {
+          "file": "03_knowledge_needs/thesis_advisor.csv",
+          "row": 58,
+          "fields": [
+            "researcher_id",
+            "thesis_id"
+          ]
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "INV-112",
+      "source_label": "Researcher",
+      "relationship": "AUTHORED_PUBLICATION",
+      "target_id": "PUB-018",
+      "target_label": "Publication",
+      "properties": {
+        "role": "AUTHOR"
+      },
+      "provenance": [
+        {
+          "file": "03_knowledge_needs/publication_researcher.csv",
+          "row": 37,
+          "fields": [
+            "researcher_id",
+            "publication_id"
+          ]
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "INV-112",
+      "source_label": "Researcher",
+      "relationship": "AUTHORED_PUBLICATION",
+      "target_id": "PUB-210",
+      "target_label": "Publication",
+      "properties": {
+        "role": "AUTHOR"
+      },
+      "provenance": [
+        {
+          "file": "03_knowledge_needs/publication_researcher.csv",
+          "row": 421,
+          "fields": [
+            "researcher_id",
+            "publication_id"
+          ]
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "INV-112",
+      "source_label": "Researcher",
+      "relationship": "BELONGS_TO_FACULTY",
+      "target_id": "FAC-004",
+      "target_label": "Faculty",
+      "properties": {},
+      "provenance": [
+        {
+          "file": "02_people_curriculum/researchers.csv",
+          "row": 113,
+          "field": "faculty_id"
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "INV-112",
+      "source_label": "Researcher",
+      "relationship": "HAS_EXPERTISE",
+      "target_id": "EXP-0445",
+      "target_label": "Expertise",
+      "properties": {},
+      "provenance": [
+        {
+          "file": "02_people_curriculum/researcher_expertise.csv",
+          "row": 446,
+          "field": "researcher_id"
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "INV-112",
+      "source_label": "Researcher",
+      "relationship": "HAS_EXPERTISE",
+      "target_id": "EXP-0446",
+      "target_label": "Expertise",
+      "properties": {},
+      "provenance": [
+        {
+          "file": "02_people_curriculum/researcher_expertise.csv",
+          "row": 447,
+          "field": "researcher_id"
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "INV-112",
+      "source_label": "Researcher",
+      "relationship": "HAS_EXPERTISE",
+      "target_id": "EXP-0447",
+      "target_label": "Expertise",
+      "properties": {},
+      "provenance": [
+        {
+          "file": "02_people_curriculum/researcher_expertise.csv",
+          "row": 448,
+          "field": "researcher_id"
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "INV-112",
+      "source_label": "Researcher",
+      "relationship": "HAS_EXPERTISE",
+      "target_id": "EXP-0448",
+      "target_label": "Expertise",
+      "properties": {},
+      "provenance": [
+        {
+          "file": "02_people_curriculum/researcher_expertise.csv",
+          "row": 449,
+          "field": "researcher_id"
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "INV-112",
+      "source_label": "Researcher",
+      "relationship": "MEMBER_OF_GROUP",
+      "target_id": "GRP-012",
+      "target_label": "ResearchGroup",
+      "properties": {
+        "role": "LEADER"
+      },
+      "provenance": [
+        {
+          "file": "02_people_curriculum/researcher_group.csv",
+          "row": 113,
+          "fields": [
+            "researcher_id",
+            "group_id"
+          ]
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "INV-112",
+      "source_label": "Researcher",
+      "relationship": "PARTICIPATED_IN_PROJECT",
+      "target_id": "PRJ-002",
+      "target_label": "Project",
+      "properties": {
+        "role": "PI"
+      },
+      "provenance": [
+        {
+          "file": "03_knowledge_needs/researcher_project.csv",
+          "row": 4,
+          "fields": [
+            "researcher_id",
+            "project_id"
+          ]
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "INV-112",
+      "source_label": "Researcher",
+      "relationship": "PARTICIPATED_IN_PROJECT",
+      "target_id": "PRJ-016",
+      "target_label": "Project",
+      "properties": {
+        "role": "CO_INVESTIGATOR"
+      },
+      "provenance": [
+        {
+          "file": "03_knowledge_needs/researcher_project.csv",
+          "row": 38,
+          "fields": [
+            "researcher_id",
+            "project_id"
+          ]
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "INV-112",
+      "source_label": "Researcher",
+      "relationship": "PARTICIPATED_IN_PROJECT",
+      "target_id": "PRJ-206",
+      "target_label": "Project",
+      "properties": {
+        "role": "PI"
+      },
+      "provenance": [
+        {
+          "file": "03_knowledge_needs/researcher_project.csv",
+          "row": 480,
+          "fields": [
+            "researcher_id",
+            "project_id"
+          ]
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "INV-112",
+      "source_label": "Researcher",
+      "relationship": "PRIMARY_PROGRAM",
+      "target_id": "PRG-010",
+      "target_label": "Program",
+      "properties": {},
+      "provenance": [
+        {
+          "file": "02_people_curriculum/researchers.csv",
+          "row": 113,
+          "field": "primary_program_id"
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "PRG-010",
+      "source_label": "Program",
+      "relationship": "BELONGS_TO_FACULTY",
+      "target_id": "FAC-004",
+      "target_label": "Faculty",
+      "properties": {},
+      "provenance": [
+        {
+          "file": "01_institution/programs.csv",
+          "row": 11,
+          "field": "faculty_id"
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "PRG-012",
+      "source_label": "Program",
+      "relationship": "BELONGS_TO_FACULTY",
+      "target_id": "FAC-004",
+      "target_label": "Faculty",
+      "properties": {},
+      "provenance": [
+        {
+          "file": "01_institution/programs.csv",
+          "row": 13,
+          "field": "faculty_id"
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "PRJ-002",
+      "source_label": "Project",
+      "relationship": "BELONGS_TO_FACULTY",
+      "target_id": "FAC-004",
+      "target_label": "Faculty",
+      "properties": {},
+      "provenance": [
+        {
+          "file": "03_knowledge_needs/projects.csv",
+          "row": 3,
+          "field": "faculty_id"
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "PRJ-002",
+      "source_label": "Project",
+      "relationship": "BELONGS_TO_PROGRAM",
+      "target_id": "PRG-012",
+      "target_label": "Program",
+      "properties": {},
+      "provenance": [
+        {
+          "file": "03_knowledge_needs/projects.csv",
+          "row": 3,
+          "field": "program_id"
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "PRJ-002",
+      "source_label": "Project",
+      "relationship": "EXECUTED_BY_GROUP",
+      "target_id": "GRP-012",
+      "target_label": "ResearchGroup",
+      "properties": {
+        "relation": "EXECUTING_GROUP"
+      },
+      "provenance": [
+        {
+          "file": "03_knowledge_needs/projects.csv",
+          "row": 3,
+          "field": "group_id"
+        },
+        {
+          "file": "03_knowledge_needs/project_group.csv",
+          "row": 3,
+          "fields": [
+            "project_id",
+            "group_id"
+          ]
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "PRJ-016",
+      "source_label": "Project",
+      "relationship": "BELONGS_TO_FACULTY",
+      "target_id": "FAC-004",
+      "target_label": "Faculty",
+      "properties": {},
+      "provenance": [
+        {
+          "file": "03_knowledge_needs/projects.csv",
+          "row": 17,
+          "field": "faculty_id"
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "PRJ-206",
+      "source_label": "Project",
+      "relationship": "BELONGS_TO_FACULTY",
+      "target_id": "FAC-004",
+      "target_label": "Faculty",
+      "properties": {},
+      "provenance": [
+        {
+          "file": "03_knowledge_needs/projects.csv",
+          "row": 207,
+          "field": "faculty_id"
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "PUB-002",
+      "source_label": "Publication",
+      "relationship": "DERIVED_FROM_PROJECT",
+      "target_id": "PRJ-002",
+      "target_label": "Project",
+      "properties": {
+        "relation": "DERIVED_FROM"
+      },
+      "provenance": [
+        {
+          "file": "03_knowledge_needs/publications.csv",
+          "row": 3,
+          "field": "related_project_id"
+        },
+        {
+          "file": "03_knowledge_needs/publication_project.csv",
+          "row": 3,
+          "fields": [
+            "publication_id",
+            "project_id"
+          ]
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "PUB-010",
+      "source_label": "Publication",
+      "relationship": "DERIVED_FROM_PROJECT",
+      "target_id": "PRJ-002",
+      "target_label": "Project",
+      "properties": {
+        "relation": "DERIVED_FROM"
+      },
+      "provenance": [
+        {
+          "file": "03_knowledge_needs/publications.csv",
+          "row": 11,
+          "field": "related_project_id"
+        },
+        {
+          "file": "03_knowledge_needs/publication_project.csv",
+          "row": 11,
+          "fields": [
+            "publication_id",
+            "project_id"
+          ]
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "PUB-018",
+      "source_label": "Publication",
+      "relationship": "DERIVED_FROM_PROJECT",
+      "target_id": "PRJ-016",
+      "target_label": "Project",
+      "properties": {
+        "relation": "DERIVED_FROM"
+      },
+      "provenance": [
+        {
+          "file": "03_knowledge_needs/publications.csv",
+          "row": 19,
+          "field": "related_project_id"
+        },
+        {
+          "file": "03_knowledge_needs/publication_project.csv",
+          "row": 19,
+          "fields": [
+            "publication_id",
+            "project_id"
+          ]
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "SUB-083",
+      "source_label": "Subject",
+      "relationship": "BELONGS_TO_PROGRAM",
+      "target_id": "PRG-012",
+      "target_label": "Program",
+      "properties": {},
+      "provenance": [
+        {
+          "file": "02_people_curriculum/subjects.csv",
+          "row": 84,
+          "field": "program_id"
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "SUB-083",
+      "source_label": "Subject",
+      "relationship": "DEVELOPS_COMPETENCY",
+      "target_id": "COM-0165",
+      "target_label": "Competency",
+      "properties": {},
+      "provenance": [
+        {
+          "file": "02_people_curriculum/competencies.csv",
+          "row": 166,
+          "field": "subject_id"
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "SUB-083",
+      "source_label": "Subject",
+      "relationship": "DEVELOPS_COMPETENCY",
+      "target_id": "COM-0166",
+      "target_label": "Competency",
+      "properties": {},
+      "provenance": [
+        {
+          "file": "02_people_curriculum/competencies.csv",
+          "row": 167,
+          "field": "subject_id"
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "SUB-083",
+      "source_label": "Subject",
+      "relationship": "HAS_LEARNING_OUTCOME",
+      "target_id": "LO-0247",
+      "target_label": "LearningOutcome",
+      "properties": {},
+      "provenance": [
+        {
+          "file": "02_people_curriculum/learning_outcomes.csv",
+          "row": 248,
+          "field": "subject_id"
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "SUB-083",
+      "source_label": "Subject",
+      "relationship": "HAS_LEARNING_OUTCOME",
+      "target_id": "LO-0248",
+      "target_label": "LearningOutcome",
+      "properties": {},
+      "provenance": [
+        {
+          "file": "02_people_curriculum/learning_outcomes.csv",
+          "row": 249,
+          "field": "subject_id"
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "SUB-083",
+      "source_label": "Subject",
+      "relationship": "HAS_LEARNING_OUTCOME",
+      "target_id": "LO-0249",
+      "target_label": "LearningOutcome",
+      "properties": {},
+      "provenance": [
+        {
+          "file": "02_people_curriculum/learning_outcomes.csv",
+          "row": 250,
+          "field": "subject_id"
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "THS-002",
+      "source_label": "Thesis",
+      "relationship": "BELONGS_TO_PROGRAM",
+      "target_id": "PRG-012",
+      "target_label": "Program",
+      "properties": {},
+      "provenance": [
+        {
+          "file": "03_knowledge_needs/theses.csv",
+          "row": 3,
+          "field": "program_id"
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    },
+    {
+      "source_id": "THS-057",
+      "source_label": "Thesis",
+      "relationship": "BELONGS_TO_PROGRAM",
+      "target_id": "PRG-010",
+      "target_label": "Program",
+      "properties": {},
+      "provenance": [
+        {
+          "file": "03_knowledge_needs/theses.csv",
+          "row": 58,
+          "field": "program_id"
+        }
+      ],
+      "relation_origin": "EXPLICIT"
+    }
+  ]
+}
