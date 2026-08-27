@@ -260,3 +260,4 @@ Lo que este prototipo **no** hace, dicho antes de que lo pregunten:
 | [docs/CONTRATO_API.md](docs/CONTRATO_API.md) | contrato que consume la interfaz |
 | [docs/ENTREGA_PERSONA_1.md](docs/ENTREGA_PERSONA_1.md) | modelo, dimensión y Cypher del índice vectorial |
 | [docs/CHECKLIST_EVALUACION.md](docs/CHECKLIST_EVALUACION.md) | dónde se cumple cada punto del checklist de evaluación |
+| [docs/presentacion.html](docs/presentacion.html) | presentación visual: cada parte del programa explicada |

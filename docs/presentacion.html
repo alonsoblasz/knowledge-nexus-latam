@@ -1,0 +1,686 @@
+<title>Anatomía de Knowledge Nexus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+
+<style>
+  :root {
+    --ground: #F4F6FB;
+    --surface: #FFFFFF;
+    --surface-2: #EDF1F8;
+    --ink: #0F1424;
+    --muted: #59627A;
+    --line: #D9E0EC;
+    --explicit: #1D4ED8;
+    --inferred: #7C3AED;
+    --evidence: #B45309;
+    --shadow: 0 1px 2px rgba(15,20,36,.05), 0 8px 24px rgba(15,20,36,.05);
+    --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+    --body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+    --measure: 66ch;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #0B0F1B;
+      --surface: #141A2A;
+      --surface-2: #1B2233;
+      --ink: #E7EBF5;
+      --muted: #98A2B9;
+      --line: #262F44;
+      --explicit: #7BA2FF;
+      --inferred: #B394FB;
+      --evidence: #EFA85A;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #0B0F1B;
+    --surface: #141A2A;
+    --surface-2: #1B2233;
+    --ink: #E7EBF5;
+    --muted: #98A2B9;
+    --line: #262F44;
+    --explicit: #7BA2FF;
+    --inferred: #B394FB;
+    --evidence: #EFA85A;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.35);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px 96px; }
+
+  h1, h2, h3 { font-family: var(--display); font-weight: 800; text-wrap: balance; margin: 0; }
+  h1 { font-size: clamp(2.3rem, 5.4vw, 3.9rem); line-height: 1.02; letter-spacing: -.026em; }
+  h2 { font-size: clamp(1.5rem, 2.7vw, 2rem); line-height: 1.14; letter-spacing: -.018em; }
+  h3 { font-size: 1.06rem; font-weight: 600; letter-spacing: -.008em; }
+  p { margin: 0; max-width: var(--measure); }
+  a { color: var(--explicit); }
+
+  .eyebrow {
+    font-family: var(--mono); font-size: .74rem; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--muted); margin: 0;
+  }
+  .lede { font-size: 1.16rem; color: var(--muted); max-width: 60ch; }
+  code, .mono { font-family: var(--mono); font-size: .875em; }
+  code {
+    background: var(--surface-2); border-radius: 4px; padding: .1em .38em;
+    border: 1px solid var(--line);
+  }
+
+  /* Cabecera */
+  header.hero { padding: 84px 0 40px; display: flex; flex-direction: column; gap: 22px; }
+  .hero-meta {
+    display: flex; flex-wrap: wrap; gap: 8px 10px; font-family: var(--mono);
+    font-size: .78rem; color: var(--muted);
+  }
+  .hero-meta span {
+    border: 1px solid var(--line); border-radius: 999px; padding: 3px 11px;
+    background: var(--surface);
+  }
+
+  /* Secciones */
+  section { padding-top: 68px; }
+  .sec-head { display: flex; flex-direction: column; gap: 10px; margin-bottom: 26px; }
+
+  /* Figuras */
+  figure { margin: 0; }
+  figure svg { display: block; width: 100%; max-width: 100%; height: auto; }
+  .figbox {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+    padding: 22px; box-shadow: var(--shadow); overflow-x: auto;
+  }
+  figcaption { color: var(--muted); font-size: .92rem; margin-top: 14px; max-width: var(--measure); }
+
+  /* Estaciones del recorrido */
+  .stations { display: flex; flex-direction: column; gap: 14px; }
+  .station {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+    padding: 22px 24px; box-shadow: var(--shadow);
+    display: grid; grid-template-columns: 44px 1fr; gap: 4px 18px; align-items: start;
+  }
+  .station-num {
+    font-family: var(--mono); font-size: .82rem; font-weight: 500;
+    color: var(--surface); background: var(--ink);
+    width: 30px; height: 30px; border-radius: 8px;
+    display: grid; place-items: center; margin-top: 2px;
+  }
+  .station-body { display: flex; flex-direction: column; gap: 12px; }
+  .station h3 { margin-bottom: -4px; }
+  .io {
+    display: flex; flex-wrap: wrap; gap: 8px; font-family: var(--mono); font-size: .76rem;
+  }
+  .io b {
+    font-weight: 400; color: var(--muted); text-transform: uppercase;
+    letter-spacing: .1em; align-self: center;
+  }
+  .chip {
+    border: 1px solid var(--line); background: var(--surface-2);
+    border-radius: 6px; padding: 3px 9px;
+  }
+  .chip.out { border-color: color-mix(in srgb, var(--explicit) 40%, var(--line)); }
+  .modules { font-family: var(--mono); font-size: .78rem; color: var(--muted); }
+
+  /* Señales del ranking */
+  .signals { display: flex; flex-direction: column; gap: 2px; }
+  .signal {
+    display: grid; grid-template-columns: 132px 1fr 62px; gap: 16px; align-items: center;
+    padding: 11px 0; border-bottom: 1px solid var(--line);
+  }
+  .signal:last-child { border-bottom: 0; }
+  .signal-name { font-weight: 600; font-size: .95rem; }
+  .signal-name em { display: block; font-style: normal; font-weight: 400; font-size: .78rem; color: var(--muted); font-family: var(--mono); }
+  .bar { background: var(--surface-2); border-radius: 3px; height: 22px; position: relative; overflow: hidden; }
+  .bar span { position: absolute; inset: 0 auto 0 0; background: var(--explicit); border-radius: 3px; }
+  .bar span.w { background: color-mix(in srgb, var(--explicit) 32%, transparent); }
+  .signal-val { font-family: var(--mono); font-size: .86rem; text-align: right; font-variant-numeric: tabular-nums; }
+
+  /* Tablas */
+  .tablebox { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); box-shadow: var(--shadow); }
+  table { border-collapse: collapse; width: 100%; font-size: .92rem; }
+  th, td { text-align: left; padding: 11px 16px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-family: var(--mono); font-size: .74rem; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); font-weight: 400; }
+  tr:last-child td { border-bottom: 0; }
+  td.mono { font-family: var(--mono); font-size: .84rem; white-space: nowrap; }
+
+  /* Bloques de nota */
+  .note {
+    border-left: 3px solid var(--evidence); background: var(--surface);
+    padding: 16px 20px; border-radius: 0 10px 10px 0; border-top: 1px solid var(--line);
+    border-right: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  }
+  .note p { max-width: 62ch; }
+  .note .eyebrow { color: var(--evidence); margin-bottom: 6px; }
+
+  /* Anatomía de la respuesta */
+  .anatomy { display: grid; grid-template-columns: minmax(0,1.05fr) minmax(0,1fr); gap: 18px; }
+  pre {
+    margin: 0; background: var(--surface); border: 1px solid var(--line);
+    border-radius: 12px; padding: 18px 20px; overflow-x: auto;
+    font-family: var(--mono); font-size: .8rem; line-height: 1.75; box-shadow: var(--shadow);
+  }
+  .k { color: var(--explicit); }
+  .c { color: var(--muted); }
+  .v { color: var(--evidence); }
+  .legend { display: flex; flex-direction: column; gap: 12px; }
+  .legend div { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 13px 16px; }
+  .legend b { display: block; font-family: var(--mono); font-size: .78rem; color: var(--muted); font-weight: 400; margin-bottom: 3px; }
+  .legend p { font-size: .92rem; }
+
+  /* Comandos */
+  .cmds { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+  .cmd { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 15px 18px; box-shadow: var(--shadow); }
+  .cmd code { background: none; border: 0; padding: 0; font-size: .92rem; color: var(--explicit); font-weight: 500; }
+  .cmd p { font-size: .88rem; color: var(--muted); margin-top: 5px; }
+
+  .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+
+  footer { margin-top: 84px; padding-top: 26px; border-top: 1px solid var(--line); color: var(--muted); font-size: .88rem; }
+
+  @media (max-width: 720px) {
+    .anatomy { grid-template-columns: 1fr; }
+    .signal { grid-template-columns: 108px 1fr 54px; gap: 10px; }
+    .station { grid-template-columns: 1fr; }
+    .station-num { margin-bottom: 4px; }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .station, .cmd { transition: transform .16s ease, box-shadow .16s ease; }
+    .station:hover, .cmd:hover { transform: translateY(-1px); }
+  }
+  :focus-visible { outline: 2px solid var(--inferred); outline-offset: 3px; border-radius: 4px; }
+</style>
+
+<div class="wrap">
+
+<header class="hero">
+  <p class="eyebrow">Knowledge Nexus LATAM · cómo funciona por dentro</p>
+  <h1>Anatomía de un motor<br>de búsqueda que explica<br>sus respuestas</h1>
+  <p class="lede">
+    Recibe una necesidad institucional y devuelve qué investigación, qué personas
+    y qué capacidades de la universidad pueden responderla — con la fila exacta
+    del CSV que lo respalda. Esto es cada pieza, en orden.
+  </p>
+  <div class="hero-meta">
+    <span>3.292 documentos indexados</span>
+    <span>3.327 nodos · 6.353 aristas</span>
+    <span>BGE-M3 · 1024 dimensiones</span>
+    <span>165 ms por consulta</span>
+    <span>74 pruebas</span>
+  </div>
+</header>
+
+<section>
+  <div class="sec-head">
+    <p class="eyebrow">El problema</p>
+    <h2>La necesidad dice «deserción». El proyecto dice «student attrition».</h2>
+    <p>
+      Son lo mismo y no comparten una sola palabra. Ese es el caso que justifica
+      todo lo demás: ningún buscador de palabras clave los conecta, y una vez
+      conectados hay que demostrar <em>por qué</em>.
+    </p>
+  </div>
+
+  <div class="figbox">
+    <figure>
+      <svg viewBox="0 0 920 330" role="img" aria-label="Tres canales conectan la necesidad NEED-001 con el proyecto PRJ-002: el canal léxico solo coincide en riesgo académico, el canal vectorial cruza los idiomas con coseno 0,66, y el grafo aporta la facultad compartida FAC-004.">
+        <defs>
+          <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"/>
+          </marker>
+          <marker id="ar-v" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#7C3AED"/>
+          </marker>
+        </defs>
+
+        <!-- Necesidad -->
+        <rect x="8" y="96" width="212" height="128" rx="10" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <text x="24" y="122" font-family="IBM Plex Mono, monospace" font-size="12" fill="currentColor" opacity=".65">NEED-001 · institutional_needs.csv:2</text>
+        <text x="24" y="148" font-family="IBM Plex Sans, sans-serif" font-size="14" font-weight="600" fill="currentColor">deserción estudiantil</text>
+        <text x="24" y="172" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="currentColor" opacity=".8">permanencia estudiantil</text>
+        <text x="24" y="194" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="currentColor" opacity=".8">riesgo académico</text>
+
+        <!-- Proyecto -->
+        <rect x="700" y="96" width="212" height="128" rx="10" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <text x="716" y="122" font-family="IBM Plex Mono, monospace" font-size="12" fill="currentColor" opacity=".65">PRJ-002 · projects.csv:3</text>
+        <text x="716" y="148" font-family="IBM Plex Sans, sans-serif" font-size="14" font-weight="600" fill="currentColor">student attrition</text>
+        <text x="716" y="172" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="currentColor" opacity=".8">riesgo académico</text>
+        <text x="716" y="194" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="currentColor" opacity=".8">analítica educativa</text>
+
+        <!-- Canal léxico -->
+        <line x1="228" y1="52" x2="692" y2="52" stroke="currentColor" stroke-width="1.3" stroke-dasharray="5 5" opacity=".45" marker-end="url(#ar)"/>
+        <text x="460" y="38" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="currentColor" opacity=".7">BM25 · solo coincide «riesgo académico»</text>
+        <text x="460" y="72" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="currentColor" opacity=".55">no cruza el idioma</text>
+
+        <!-- Canal vectorial -->
+        <line x1="228" y1="150" x2="692" y2="150" stroke="#7C3AED" stroke-width="2.4" marker-end="url(#ar-v)"/>
+        <text x="460" y="138" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12.5" fill="#7C3AED" font-weight="500">vector BGE-M3 · coseno 0,66</text>
+        <text x="460" y="172" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#7C3AED" opacity=".85">esta es la conexión que nadie más encuentra</text>
+
+        <!-- Canal grafo -->
+        <path d="M 114 232 L 114 286 L 460 286" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".6"/>
+        <path d="M 806 232 L 806 286 L 552 286" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".6"/>
+        <rect x="460" y="268" width="92" height="36" rx="8" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".75"/>
+        <text x="506" y="291" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="currentColor" opacity=".8">FAC-004</text>
+        <text x="240" y="278" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="currentColor" opacity=".6">misma facultad</text>
+        <text x="600" y="278" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="currentColor" opacity=".6">relación explícita</text>
+      </svg>
+      <figcaption>
+        Los tres canales son complementarios. El vectorial cruza el idioma; el
+        léxico ancla términos que un evaluador puede verificar; el grafo aporta
+        la facultad compartida, que ningún texto menciona. Ninguno basta solo.
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head">
+    <p class="eyebrow">El recorrido</p>
+    <h2>De un CSV a una respuesta explicada</h2>
+    <p>
+      Seis etapas. Las tres primeras ocurren una vez, sin usuario delante. Las
+      tres últimas, en los 165 milisegundos que dura una consulta.
+    </p>
+  </div>
+
+  <div class="figbox">
+    <figure>
+      <svg viewBox="0 0 980 190" role="img" aria-label="Pipeline de seis etapas: fuentes, procesamiento y representación ocurren offline; descubrimiento, valoración y resultados ocurren durante la consulta.">
+        <defs>
+          <marker id="p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"/>
+          </marker>
+        </defs>
+        <line x1="12" y1="30" x2="470" y2="30" stroke="currentColor" stroke-width="1" opacity=".3"/>
+        <text x="12" y="22" font-family="IBM Plex Mono, monospace" font-size="11" fill="currentColor" opacity=".6">INDEXACIÓN — una sola vez</text>
+        <line x1="510" y1="30" x2="968" y2="30" stroke="#7C3AED" stroke-width="1" opacity=".45"/>
+        <text x="510" y="22" font-family="IBM Plex Mono, monospace" font-size="11" fill="#7C3AED" opacity=".9">CONSULTA — 165 ms</text>
+
+        <g font-family="IBM Plex Sans, sans-serif" font-size="13" fill="currentColor">
+          <rect x="12" y="52" width="136" height="58" rx="9" fill="none" stroke="currentColor" stroke-width="1.4"/>
+          <text x="80" y="78" text-anchor="middle" font-weight="600">Fuentes</text>
+          <text x="80" y="96" text-anchor="middle" font-size="11.5" opacity=".65">22 CSV · Markdown</text>
+
+          <rect x="176" y="52" width="136" height="58" rx="9" fill="none" stroke="currentColor" stroke-width="1.4"/>
+          <text x="244" y="78" text-anchor="middle" font-weight="600">Procesamiento</text>
+          <text x="244" y="96" text-anchor="middle" font-size="11.5" opacity=".65">validar · embeber</text>
+
+          <rect x="340" y="52" width="136" height="58" rx="9" fill="none" stroke="currentColor" stroke-width="1.4"/>
+          <text x="408" y="78" text-anchor="middle" font-weight="600">Representación</text>
+          <text x="408" y="96" text-anchor="middle" font-size="11.5" opacity=".65">grafo · vectores</text>
+
+          <rect x="504" y="52" width="136" height="58" rx="9" fill="none" stroke="#7C3AED" stroke-width="1.6"/>
+          <text x="572" y="78" text-anchor="middle" font-weight="600" fill="#7C3AED">Descubrimiento</text>
+          <text x="572" y="96" text-anchor="middle" font-size="11.5" fill="#7C3AED" opacity=".8">3 canales</text>
+
+          <rect x="668" y="52" width="136" height="58" rx="9" fill="none" stroke="#7C3AED" stroke-width="1.6"/>
+          <text x="736" y="78" text-anchor="middle" font-weight="600" fill="#7C3AED">Valoración</text>
+          <text x="736" y="96" text-anchor="middle" font-size="11.5" fill="#7C3AED" opacity=".8">6 señales</text>
+
+          <rect x="832" y="52" width="136" height="58" rx="9" fill="none" stroke="#7C3AED" stroke-width="1.6"/>
+          <text x="900" y="78" text-anchor="middle" font-weight="600" fill="#7C3AED">Resultados</text>
+          <text x="900" y="96" text-anchor="middle" font-size="11.5" fill="#7C3AED" opacity=".8">API · interfaz</text>
+        </g>
+
+        <g stroke="currentColor" stroke-width="1.3" marker-end="url(#p)">
+          <line x1="152" y1="81" x2="170" y2="81"/>
+          <line x1="316" y1="81" x2="334" y2="81"/>
+          <line x1="480" y1="81" x2="498" y2="81"/>
+          <line x1="644" y1="81" x2="662" y2="81"/>
+          <line x1="808" y1="81" x2="826" y2="81"/>
+        </g>
+
+        <g font-family="IBM Plex Mono, monospace" font-size="10.5" fill="currentColor" opacity=".6" text-anchor="middle">
+          <text x="162" y="134">normaliza</text>
+          <text x="326" y="134">indexa</text>
+          <text x="489" y="134">consulta</text>
+          <text x="653" y="134">candidatos</text>
+          <text x="817" y="134">ranking</text>
+        </g>
+
+        <text x="12" y="172" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="currentColor" opacity=".65">Los embeddings del corpus nunca se calculan durante una consulta: solo se codifica la pregunta.</text>
+      </svg>
+      <figcaption>
+        Separar indexación de consulta es lo que mantiene la respuesta por debajo
+        de 200&nbsp;ms con 3.292 documentos.
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head">
+    <p class="eyebrow">Cada parte, en detalle</p>
+    <h2>Qué hace cada etapa y qué módulo la implementa</h2>
+  </div>
+
+  <div class="stations">
+    <article class="station">
+      <div class="station-num">1</div>
+      <div class="station-body">
+        <h3>Fuentes — los datos que nunca se tocan</h3>
+        <p>Los 22 CSV y los documentos Markdown de Data V1.0. Son la única fuente
+        de verdad y jamás se sobrescriben: todo lo demás es una capa derivada que
+        se puede borrar y reconstruir.</p>
+        <div class="io"><b>entra</b><span class="chip">nada</span><b>sale</b><span class="chip out">22 CSV · 60 Markdown</span></div>
+        <p class="modules">data/KNOWLEDGE_NEXUS_LATAM_DATA_V1_RC2_PARTICIPANTS/</p>
+      </div>
+    </article>
+
+    <article class="station">
+      <div class="station-num">2</div>
+      <div class="station-body">
+        <h3>Procesamiento — de tabla a texto con significado</h3>
+        <p>Se validan columnas, tipos e IDs; se construyen los nodos y las
+        relaciones; y por cada entidad se escribe un <em>documento semántico</em>
+        que conserva el rol de cada campo (<code>Problema:</code>,
+        <code>Metodología:</code>). Ese detalle permite después el camino inverso:
+        de un fragmento de texto al campo exacto que lo originó.</p>
+        <p>Luego se calcula un embedding por documento con BGE-M3, por lotes y
+        reanudable: si el proceso se interrumpe, la siguiente ejecución continúa
+        donde iba. Cada vector guarda el hash del texto que lo generó, así que un
+        cambio en los datos se detecta en vez de servir un vector obsoleto.</p>
+        <div class="io"><b>entra</b><span class="chip">CSV</span><b>sale</b><span class="chip out">3.292 documentos</span><span class="chip out">3.292 vectores · 1024d</span></div>
+        <p class="modules">knowledge_nexus_data/ · embeddings/pipeline.py · embeddings/providers.py</p>
+      </div>
+    </article>
+
+    <article class="station">
+      <div class="station-num">3</div>
+      <div class="station-body">
+        <h3>Representación — tres estructuras para buscar</h3>
+        <p>El <strong>grafo</strong> (3.327 nodos, 6.353 aristas con su
+        procedencia), el <strong>índice vectorial</strong> (una matriz normalizada
+        filtrable por tipo de entidad) y el <strong>índice léxico BM25</strong>
+        con unigramas y bigramas.</p>
+        <p>El grafo se consume siempre por el mismo contrato de cuatro métodos, así
+        que pasar de los JSONL locales a Neo4j Aura es una variable de entorno.
+        Ninguna consulta Cypher vive fuera de la capa de datos.</p>
+        <div class="io"><b>entra</b><span class="chip">documentos · vectores</span><b>sale</b><span class="chip out">grafo</span><span class="chip out">índice vectorial</span><span class="chip out">índice BM25</span></div>
+        <p class="modules">data/graph_port.py · data/jsonl_graph.py · retrieval/vector.py · retrieval/lexical.py</p>
+      </div>
+    </article>
+
+    <article class="station">
+      <div class="station-num">4</div>
+      <div class="station-body">
+        <h3>Descubrimiento — generar candidatos, no decidir</h3>
+        <p>La pregunta se convierte en un vector mezclado con el de la necesidad
+        seleccionada. Con él se recuperan los mejores candidatos <em>por tipo</em>
+        en el canal vectorial y en el léxico, se deduplican por ID, y desde los
+        mejores se expanden una o dos aristas explícitas del grafo para traer
+        investigadores, grupos y producción asociada.</p>
+        <p>De unos 400 candidatos evaluados sobreviven cinco o seis. Cada uno
+        conserva la traza de por qué canal entró.</p>
+        <div class="io"><b>entra</b><span class="chip">pregunta + necesidad</span><b>sale</b><span class="chip out">~400 candidatos con traza</span></div>
+        <p class="modules">retrieval/query.py · retrieval/hybrid.py</p>
+      </div>
+    </article>
+
+    <article class="station">
+      <div class="station-num">5</div>
+      <div class="station-body">
+        <h3>Valoración — seis señales, evidencia y oportunidad</h3>
+        <p>Cada candidato se puntúa con seis señales ponderadas menos
+        penalizaciones (siguiente sección). Antes de redactar nada se cierra el
+        <strong>paquete de evidencia</strong>: archivo, fila, campo y fragmento de
+        cada afirmación. Si una conexión no tiene evidencia, no se muestra.</p>
+        <p>Sobre ese paquete, reglas deterministas proponen oportunidades de uno de
+        siete tipos. Cada ID citado se valida contra lo recuperado: una
+        oportunidad que mencione algo inexistente lanza un error en lugar de
+        publicarse.</p>
+        <div class="io"><b>entra</b><span class="chip">candidatos</span><b>sale</b><span class="chip out">ranking + desglose</span><span class="chip out">evidencia</span><span class="chip out">oportunidades</span></div>
+        <p class="modules">ranking/features.py · ranking/scorer.py · evidence/assembler.py · opportunities/generator.py</p>
+      </div>
+    </article>
+
+    <article class="station">
+      <div class="station-num">6</div>
+      <div class="station-body">
+        <h3>Resultados — un contrato, dos consumidores</h3>
+        <p>La API devuelve conexiones, desglose, evidencia, subgrafo,
+        oportunidades, candidatos descartados y un nivel de confianza. La interfaz
+        Streamlit consume exactamente esa respuesta y no sabe nada de Neo4j ni de
+        credenciales.</p>
+        <p>El mismo contrato lo sirve el fixture del equipo, así que la interfaz
+        se puede desarrollar y demostrar aunque el motor no esté levantado.</p>
+        <div class="io"><b>entra</b><span class="chip">respuesta del motor</span><b>sale</b><span class="chip out">JSON estable</span><span class="chip out">interfaz</span></div>
+        <p class="modules">api/main.py · api/schemas.py · ui/app.py</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head">
+    <p class="eyebrow">El corazón del sistema</p>
+    <h2>Por qué PRJ-002 aparece primero</h2>
+    <p>
+      Cuatro proyectos hablan de lo mismo con textos casi idénticos. La similitud
+      sola no los distingue. Estas son las seis señales que sí, con los valores
+      reales de la consulta de demostración.
+    </p>
+  </div>
+
+  <div class="figbox">
+    <div class="signals">
+      <div class="signal">
+        <div class="signal-name">Semántica<em>peso 0,35</em></div>
+        <div class="bar"><span class="w" style="width:97.4%"></span><span style="width:34.1%"></span></div>
+        <div class="signal-val">0,97</div>
+      </div>
+      <div class="signal">
+        <div class="signal-name">Dominio<em>peso 0,20</em></div>
+        <div class="bar"><span class="w" style="width:54.4%"></span><span style="width:10.9%"></span></div>
+        <div class="signal-val">0,54</div>
+      </div>
+      <div class="signal">
+        <div class="signal-name">Método<em>peso 0,15</em></div>
+        <div class="bar"><span class="w" style="width:75%"></span><span style="width:11.3%"></span></div>
+        <div class="signal-val">0,75</div>
+      </div>
+      <div class="signal">
+        <div class="signal-name">Grafo<em>peso 0,10</em></div>
+        <div class="bar"><span class="w" style="width:60.2%"></span><span style="width:6%"></span></div>
+        <div class="signal-val">0,60</div>
+      </div>
+      <div class="signal">
+        <div class="signal-name">Evidencia<em>peso 0,10</em></div>
+        <div class="bar"><span class="w" style="width:100%"></span><span style="width:10%"></span></div>
+        <div class="signal-val">1,00</div>
+      </div>
+      <div class="signal">
+        <div class="signal-name">Accionable<em>peso 0,10</em></div>
+        <div class="bar"><span class="w" style="width:87.8%"></span><span style="width:8.8%"></span></div>
+        <div class="signal-val">0,88</div>
+      </div>
+    </div>
+    <figcaption>
+      La barra clara es el valor de la señal; la sólida, lo que aporta al total
+      una vez aplicado su peso. Suma <strong>0,810</strong>, sin penalizaciones.
+      La semántica manda, pero el dominio es lo que separa a PRJ-002 (0,54) de
+      sus tres hermanos casi idénticos (0,45).
+    </figcaption>
+  </div>
+
+  <div class="grid2" style="margin-top:18px">
+    <div class="tablebox">
+      <table>
+        <thead><tr><th>Señal</th><th>Qué mide en realidad</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">semantic</td><td>Coseno del modelo <em>calibrado</em> sobre este corpus, fusionado con BM25. Un 0,55 crudo no es «55&nbsp;% de parecido»: la mediana del corpus es 0,35 y el máximo 0,65, así que se reescala entre esos extremos.</td></tr>
+          <tr><td class="mono">domain</td><td>Facultad, programa o grupo compartido; vocabulario declarado; área disciplinar. La necesidad no declara área, pero sí su unidad de origen: de ahí se hereda.</td></tr>
+          <tr><td class="mono">method</td><td>Compatibilidad metodológica. Si la consulta no pide metodología, se valora la sustancia declarada del candidato, con tope, porque no hubo comparación real.</td></tr>
+          <tr><td class="mono">graph</td><td>Proximidad explícita, conectividad y vecinos compartidos. Solo relaciones reales.</td></tr>
+          <tr><td class="mono">evidence</td><td>Cuántos campos tienen contenido, si hay procedencia completa y si existe documento asociado.</td></tr>
+          <tr><td class="mono">actionable</td><td>Estado, vigencia, personas identificables y recursos disponibles.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div class="note">
+        <p class="eyebrow">El detalle que casi se nos escapa</p>
+        <p>
+          Las necesidades institucionales <strong>no tienen ninguna arista hacia
+          proyectos</strong> en Data V1.0. La distancia de NEED-001 a PRJ-002 es
+          infinita. El motor lo reporta como tal en vez de simular el enlace que
+          falta, y se apoya en la conectividad del candidato y en los vecinos
+          compartidos.
+        </p>
+      </div>
+      <div class="note" style="border-left-color:var(--inferred)">
+        <p class="eyebrow" style="color:var(--inferred)">Y también lo contrario</p>
+        <p>
+          Cada respuesta incluye los candidatos <strong>descartados</strong> con su
+          motivo. Poder decir por qué algo <em>no</em> es relevante —«PUB-074,
+          0,29: no comparte unidad, área ni vocabulario»— es lo que evita que el
+          ranking parezca una caja negra.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head">
+    <p class="eyebrow">La respuesta</p>
+    <h2>Anatomía de lo que devuelve la API</h2>
+    <p>Un solo <code>POST /v1/search</code>. Todo lo que la interfaz necesita viene en él.</p>
+  </div>
+
+  <div class="anatomy">
+<pre><span class="c">{</span>
+  <span class="k">"query_entity"</span>: { <span class="v">"NEED-001"</span> … },
+  <span class="k">"connections"</span>: [{
+    <span class="k">"target"</span>:     { <span class="v">"PRJ-002"</span> … },
+    <span class="k">"relation"</span>:   <span class="v">"RELEVANT_ANTECEDENT"</span>,
+    <span class="k">"relation_origin"</span>: <span class="v">"INFERRED"</span>,
+    <span class="k">"relevance"</span>:  { total, 6 señales,
+                    pesos, penalizaciones },
+    <span class="k">"explanation"</span>: <span class="v">"coincide en …"</span>,
+    <span class="k">"evidence"</span>:   [{ file, row,
+                    field, excerpt }],
+    <span class="k">"components_detail"</span>: { … },
+    <span class="k">"retrieval"</span>:  { canales, términos }
+  }],
+  <span class="k">"opportunities"</span>: [{ tipo, entidades,
+                     incertidumbre }],
+  <span class="k">"discarded"</span>:   [{ id, motivo }],
+  <span class="k">"confidence"</span>:  { nivel, mensaje },
+  <span class="k">"graph"</span>:       { nodes, edges },
+  <span class="k">"meta"</span>:        { modelo, latencia }
+<span class="c">}</span></pre>
+
+    <div class="legend">
+      <div>
+        <b>relation_origin</b>
+        <p><code>INFERRED</code> siempre que la calcule el motor. La interfaz la
+        dibuja discontinua; las relaciones <code>EXPLICIT</code> del grafo, en
+        línea continua. Una hipótesis nunca se presenta como un hecho
+        administrativo.</p>
+      </div>
+      <div>
+        <b>evidence[]</b>
+        <p>Archivo, fila, campo y fragmento. La trazabilidad medida es del
+        100&nbsp;%: no hay conexión mostrada sin al menos un elemento verificable.</p>
+      </div>
+      <div>
+        <b>confidence</b>
+        <p>Cuando la señal semántica del primer resultado es baja, la respuesta se
+        marca como poco fiable. Entregar lo mejor que se encontró no es lo mismo
+        que afirmar que responde a la pregunta.</p>
+      </div>
+      <div>
+        <b>discarded[]</b>
+        <p>Qué quedó fuera y por qué: por debajo del corte, por la cuota que evita
+        que un tipo ocupe toda la respuesta, o por penalización.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head">
+    <p class="eyebrow">Dónde está cada cosa</p>
+    <h2>Mapa del repositorio</h2>
+  </div>
+  <div class="tablebox">
+    <table>
+      <thead><tr><th>Ruta</th><th>Qué contiene</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">data/</td><td>Data V1.0 original. Solo lectura.</td></tr>
+        <tr><td class="mono">artifacts/generated/</td><td>Grafo, documentos semánticos y fixtures del contrato.</td></tr>
+        <tr><td class="mono">artifacts/embeddings/</td><td>Vectores y su manifiesto: modelo, dimensión, fecha, hash del origen.</td></tr>
+        <tr><td class="mono">config/</td><td>Pesos, perfiles por tipo, reglas de relación y léxico. Versionado.</td></tr>
+        <tr><td class="mono">src/knowledge_nexus_data/</td><td>Validación, construcción del grafo y contrato de lectura.</td></tr>
+        <tr><td class="mono">src/knowledge_nexus_retrieval/</td><td>El motor: embeddings, recuperación, ranking, evidencia, oportunidades, API.</td></tr>
+        <tr><td class="mono">ui/app.py</td><td>Interfaz Streamlit. Consume la API; no conoce credenciales.</td></tr>
+        <tr><td class="mono">tests/</td><td>74 pruebas que corren sin red en 15 segundos.</td></tr>
+        <tr><td class="mono">docs/</td><td>Arquitectura, ranking, casos demostrables, evidencia y checklist.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head">
+    <p class="eyebrow">Ponerlo a andar</p>
+    <h2>Siete comandos</h2>
+  </div>
+  <div class="cmds">
+    <div class="cmd"><code>make install</code><p>Entorno y dependencias.</p></div>
+    <div class="cmd"><code>make embeddings</code><p>Los 3.292 vectores, ~72 s. Reanudable.</p></div>
+    <div class="cmd"><code>make api</code><p>El motor en el puerto 8000.</p></div>
+    <div class="cmd"><code>make ui</code><p>La interfaz en el 8501.</p></div>
+    <div class="cmd"><code>make test</code><p>74 pruebas, sin red.</p></div>
+    <div class="cmd"><code>make evaluate</code><p>Métricas del conjunto de revisión.</p></div>
+    <div class="cmd"><code>make demo</code><p>Regenera los casos con salida real.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head">
+    <p class="eyebrow">Lo que no hace</p>
+    <h2>Los límites, dichos antes de que los pregunten</h2>
+  </div>
+  <div class="grid2">
+    <div class="note">
+      <p class="eyebrow">Sobre las conclusiones</p>
+      <p>Una oportunidad es una hipótesis con evidencia, no una decisión aprobada
+      por la universidad. El score mide afinidad con la consulta, no calidad
+      científica.</p>
+    </div>
+    <div class="note">
+      <p class="eyebrow">Sobre las métricas</p>
+      <p>El conjunto de evaluación no es un Gold Standard: 10 casos, un revisor,
+      etiquetas derivadas de campos declarados. La precisión reportada es una cota
+      inferior.</p>
+    </div>
+    <div class="note">
+      <p class="eyebrow">Sobre los datos</p>
+      <p>Data V1.0 es sintético y muy regular. Con datos institucionales reales
+      habrá más ruido, duplicados y campos vacíos.</p>
+    </div>
+    <div class="note">
+      <p class="eyebrow">Sobre la escala</p>
+      <p>El índice vectorial vive en memoria: sobra para 3.292 documentos, pero un
+      corpus mayor pide moverlo a Neo4j o a un motor vectorial dedicado.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Knowledge Nexus LATAM · ranking versión 1.0.0 · contrato 1.0 · modelo BAAI/bge-m3 (1024d).
+  Las cifras de esta página se obtuvieron ejecutando el sistema, no describiéndolo.
+</footer>
+
+</div>
